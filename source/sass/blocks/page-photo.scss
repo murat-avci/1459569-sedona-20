@@ -2,84 +2,62 @@
   padding-top: 32px;
   text-transform: uppercase;
   text-align: center;
-
-  &__main-title {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
-    padding: 0;
-    margin: 0 0 28px;
-  }
-
-  &__description {
-    font-size: 14px;
-    line-height: 26px;
-    color: var(--description);
-    padding: 0;
-    margin: 0 20px;
-  }
 }
 
-.photo {
-  &__wrapper {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.page-photo__main-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+.page-photo__description {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--description);
+  padding: 0;
+  margin: 0 20px;
+}
+
+.photo__wrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.photo__item {
+  padding-top: 22px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  border-bottom: 1px solid var(--special1);
+}
+
+.photo__author {
+  display: block;
+  font-weight: normal;
+  font-style: initial;
+  text-transform: initial;
+}
+
+.photo__likes {
+  position: relative;
+  padding-left: 37px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 23px;
+    height: 21px;
+    background-image: url("../img/icon-like.svg");
+    background-repeat: no-repeat;
+    opacity: 0.3;
   }
-
-  &__item {
-    padding-top: 22px;
-    padding-right: 20px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    font-size: 14px;
-    line-height: 24px;
-    text-align: left;
-    border-bottom: 1px solid #e5e5e5;
-    &--sunset {
-
-    }
-
-    &--cactus {
-
-    }
-
-    &--roads {
-
-    }
-
-    &--bridge {
-
-    }
-  }
-
-  &__title {
-
-  }
-
-  &__author {
-    display: block;
-    font-weight: normal;
-    font-style: initial;
-    text-transform: initial;
-  }
-
-  &__likes {
-    position: relative;
-    padding-left: 37px;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      width: 23px;
-      height: 21px;
-      background-image: url("../img/icon-like.svg");
-      background-repeat: no-repeat;
-      opacity: 0.3;
-    }
-  }
-
-
 }
