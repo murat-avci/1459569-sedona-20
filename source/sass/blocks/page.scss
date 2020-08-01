@@ -1,0 +1,12 @@
+
+.page {
+  font-family: "PTSans", "Tahoma", sans-serif;
+  text-transform: uppercase;
+}
+
+.page__body {
+  margin: 0 40px;
+  padding: 0;
+  background-color: var(--text-accent);
+  max-width: auto;
+}

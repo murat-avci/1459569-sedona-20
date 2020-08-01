@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -36,6 +37,8 @@
           </li>
         </ul>
       </nav>
+      <img class="page-header__sedona" src="img/text-index.svg" width="282" height="214"
+      alt="Sedona - welcome to the gorgeous">
     </header>
     <main class="page-main">
       <div class="main-title">
@@ -47,46 +50,46 @@
         <div class="advantages__wrapper">
           <ol class="advantages__list">
             <li class="advantages__item advantages__item--city">
-              <h3 class="advantages__title">НАСТОЯЩИЙ ГОРОДОК</h3>
-              <p class="advantages__sequence">— №1 —</p>
-              <p class="advantages__description">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
-              <div class="advantages__picture">
-                <img src="img/photo-city@1x1.jpg" width="520" height="260" alt="City">
+              <div class="advantages__item-title">
+                <h3 class="advantages__title advantages__title--city ">НАСТОЯЩИЙ ГОРОДОК</h3>
+                <p class="advantages__sequence advantages__sequence--city">— №1 —</p>
+                <p class="advantages__description advantages__description--city">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
               </div>
-              <ul class="advantages__list">
-                <li class="">
-                  <h3 class="advantages__title">Жилье</h3>
-                  <p class="advantages__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              <img class="advantages__responsive" src="img/photo-city@1x1.jpg" width="520" height="260" alt="City">
+              <ul class="advantages__real-city city-sublist">
+                <li class="city-sublist__item city-sublist__item--home">
+                  <h3 class="city-sublist__title">Жилье</h3>
+                  <p class="city-sublist__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </li>
-                <li class="advantages__list">
-                  <h3 class="advantages__title">СУВЕНИРЫ</h3>
-                  <p class="advantages__description">Не только китайского, но и местного производства!</p>
+                <li class="city-sublist__item city-sublist__item--souvenirs">
+                  <h3 class="city-sublist__title">СУВЕНИРЫ</h3>
+                  <p class="city-sublist__description">Не только китайского, но и местного производства!</p>
                 </li>
-                <li class="advantages__list">
-                  <h3 class="advantages__title">ЕДА</h3>
-                  <p class="advantages__description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                <li class="city-sublist__item city-sublist__item--food">
+                  <h3 class="city-sublist__title">ЕДА</h3>
+                  <p class="city-sublist__description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
                 </li>
               </ul>
             </li>
             <li class="advantages__item advantages__item--bridge">
-              <h3 class="advantages__title">ТАМ ЕСТЬ Мост дьявола</h3>
-              <p class="advantages__sequence">— №2 —</p>
-              <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-              <div class="advantages__picture">
-                <img src="img/photo-bridge@1x1.jpg" width="520" height="260" alt="Devil's bridge">
+              <div class="advantages__item-title">
+                <h3 class="advantages__title advantages__title--bridge">ТАМ ЕСТЬ Мост дьявола</h3>
+                <p class="advantages__sequence advantages__sequence--bridge">— №2 —</p>
+                <p class="advantages__description advantages__description--bridge">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
+              <img class="advantages__responsive" src="img/photo-bridge@1x1.jpg" width="520" height="260" alt="Devil's bridge">
             </li>
             <li class="advantages__item advantages__item--area">
               <h3 class="advantages__title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
               <p class="advantages__sequence">— №3 —</p>
               <p class="advantages__description">ВСЕ интересные места находятся очень близко</p>
             </li>
-            <li class="advantages__item advantages__item--road">
+            <li class="advantages__item advantages__item--area">
               <h3 class="advantages__title">КРАСИВАЯ ДОРОГА</h3>
               <p class="advantages__sequence">— №4 —</p>
               <p class="advantages__description">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
             </li>
-            <li class="advantages__item advantages__item--tourists">
+            <li class="advantages__item advantages__item--area">
               <h3 class="advantages__title">МАЛО ТУРИСТОВ</h3>
               <p class="advantages__sequence">— №5 —</p>
               <p class="advantages__description">Большинство едет в гранд каньон и толпится там</p>
@@ -112,25 +115,23 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <div class="page-footer__hashtag hashtag">
-          <b class="hashtag__text">#visitsedona</b>
-        </div>
+        <p class="page-footer__hashtag">#visitsedona</p>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="#">Мы в Твиттере</a>
+              <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Седона в твиттере</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Седона в фэйсбуке</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="#">Мы в Ютубе</a>
+              <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Седона на ютубе </span></a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
         </div>
     </div>
     </footer>
