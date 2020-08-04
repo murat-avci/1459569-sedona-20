@@ -1,0 +1,15 @@
+.button {
+  display: inline-block;
+  padding: 16px 32px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  background-color: var(--main);
+  box-sizing: border-box;
+}
+
+.button__link {
+  text-decoration: none;
+  color: var(--text-accent);
+  padding: 0 15px;
+}

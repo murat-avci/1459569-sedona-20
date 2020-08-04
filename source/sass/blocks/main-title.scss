@@ -1,18 +1,22 @@
 .main-title {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   margin: 32px auto 11px auto;
-  line-height: 26px;
 }
 
 .main-title__text {
+  display: block;
   font-size: 18px;
+  line-height: 26px;
   color: var(--text-main);
   margin-bottom: 23px;
   padding: 0 15px;
 }
 
 .main-title__description {
+  display: block;
   font-size: 14px;
+  line-height: 24px;
   color: var(--title-description);
 }

@@ -1,0 +1,239 @@
+.form {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--special1);
+}
+
+.form__item {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  padding: 0 25px 20px;
+  border: none;
+  border-bottom: 1px solid var(--special1);
+
+  &--personal {
+    position: relative;
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.form__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  &--personal {
+    margin-bottom: 19px;
+  }
+
+  &--contact {
+    margin-bottom: 17px;
+  }
+
+  &--impression,
+  &--attraction {
+    margin-bottom: 25px;
+  }
+}
+
+.form__inner {
+  display: block;
+  position: relative;
+  text-align: center;
+  padding-right: 50px;
+
+  &--personal {
+    display: block;
+    margin-bottom: 20px;
+    max-width: inherit;
+  }
+
+  &--contact,
+  &--impression,
+  &--attraction {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &--impression,
+  &--attraction {
+    margin-bottom: 44px;
+  }
+}
+
+.form__label {
+  font-size: 14px;
+  line-height: 26px;
+  text-align: left;
+  vertical-align: middle;
+  color: var(--description);
+  padding-right: 10px;
+
+  &--contact {
+    margin-bottom: 8px;
+    margin-top: 14px;
+  }
+
+  &--select {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: initial;
+  }
+
+  &--textarea {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.form__button {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-top: 51px;
+  margin-bottom: 48px;
+  padding: 16px 50px;
+  border: none;
+  color: var(--text-accent);
+  background-color: var(--main);
+}
+
+/*
+.form__input {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 100%;
+  border: none;
+  background-color: var(--input);
+  padding: 18px 22px 14px 22px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: var(--text-main);
+
+  &::placeholder {
+    color: var(--text-main);
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &--textarea {
+    color: var(--text-main);
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    padding: 13px 23px 29px 21px;
+    margin-top: 15px;
+    border: none;
+    background-color: var(--input);
+  }
+
+  &--textarea::placeholder {
+    color: var(--text-main);
+  }
+
+  &--personal {
+    box-sizing: border-box;
+  }
+}
+*/
+.form__input {
+  display: inline-block;
+  position: relative;
+  padding: 18px 22px 14px 22px;
+  background-color: var(--input);
+  box-sizing: border-box;
+  border: none;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: var(--text-main);
+
+  &--textarea::placeholder,
+  &::placeholder {
+    color: var(--text-main);
+  }
+
+  &--textarea {
+    color: var(--text-main);
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    padding: 13px 23px 29px 21px;
+    margin-top: 15px;
+    border: none;
+    background-color: var(--input);
+  }
+
+  &--personal {
+    box-sizing: border-box;
+  }
+}
+
+.form__input[type="radio"]:checked + .form__label::after {
+  content: "";
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-color: var(--text-main);
+  border: 3px solid var(--text-main);
+  border-radius: 50%;
+}
+
+.form__input[type="radio"] + .form__label::before {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--input);
+  border: 5px solid var(--input);
+  border-radius: 50%;
+}
+
+.form__input[type="checkbox"]:checked + .form__label::after {
+  content: "";
+  position: absolute;
+  left: 1.15rem;
+  top: 50%;
+  width: 23px;
+  height: 16px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 1em;
+}
+
+.form__input[type="checkbox"] + .form__label::before {
+  content: "";
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--input);
+  border: 5px solid var(--input);
+  border-radius: 10%;
+}
