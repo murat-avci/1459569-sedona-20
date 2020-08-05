@@ -29,3 +29,27 @@
 .hotel-search__button {
   margin: 0 auto 49px;
 }
+
+.hotel-search__map {
+  position: relative;
+  min-height: 350px;
+}
+
+
+.hotel-search__bg-map {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  transform: translateX(-50%);
+  border: none;
+}
+
+.hotel-search__frame-border {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  transform: translateX(-50%);
+  border: none;
+  min-height: 350px;
+  min-width: 320px;
+}
