@@ -39,9 +39,9 @@
       </nav>
     </header>
     <main class="page-main">
-      <div class="main-title">
-        <h1 class="main-title__text">Оставьте свой отзыв</h1>
-        <p class="main-title__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      <div class="main-title main-title--form">
+        <h1 class="main-title__text main-title__text--form">Оставьте свой отзыв</h1>
+        <p class="main-title__description main-title__description--form">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </div>
       <section class="feedback">
         <h2 class="visually-hidden">Форма отзывы</h2>
@@ -61,49 +61,49 @@
               <input class="form__input form__input--personal" type="text" name="middle-name" id="middle-name" placeholder="Александрович">
             </div>
           </fieldset>
-          <fieldset class="form__item">
+          <fieldset class="form__item form__item--contact">
             <legend class="form__title form__title--contact">Контактная информация:</legend>
             <div class="form__inner form__inner--contact">
               <label class="form__label form__label--contact" for="phone">Контактный телефон<sup>*</sup>:</label>
-              <input class="form__input" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
+              <input class="form__input form__input--contact" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
             </div>
             <div class="form__inner form__inner--contact">
               <label class="form__label form__label--contact" for="email">Электронная почта<sup>*</sup>:</label>
-              <input class="form__input" type="email"  id="email" name="email" placeholder="Введите e-mail" required>
+              <input class="form__input form__input--contact" type="email"  id="email" name="email" placeholder="Введите e-mail" required>
             </div>
           </fieldset>
-          <fieldset class="form__item">
+          <fieldset class="form__item form__item--impression">
             <legend class="form__title form__title--impression">Ваше общее впечатление:</legend>
             <div class="form__inner form__inner--impression">
               <input class="form__input visually-hidden" type="radio" name="positive" id="positive" checked>
-              <label class="form__label form__label--select" for="positive">Скорее положительное</label>
+              <label class="form__label form__label--impression" for="positive">Скорее положительное</label>
             </div>
             <div class="form__inner form__inner--impression">
               <input class="form__input visually-hidden" type="radio" name="negative" id="negative">
-              <label class="form__label form__label--select" for="negative">Скорее отрицательное</label>
+              <label class="form__label form__label--impression" for="negative">Скорее отрицательное</label>
             </div>
             <div class="form__inner form__inner--impression">
               <input class="form__input visually-hidden" type="radio" name="no-answer" id="no-answer">
-              <label class="form__label form__label--select" for="no-answer">Затрудняюсь ответить</label>
+              <label class="form__label form__label--impression" for="no-answer">Затрудняюсь ответить</label>
             </div>
           </fieldset>
-          <fieldset class="form__item">
+          <fieldset class="form__item form__item--attraction">
             <legend class="form__title form__title--attraction">Посещенные достопримечательности:</legend>
             <div class="form__inner form__inner--attraction">
               <input class="form__input visually-hidden" type="checkbox" name="bridge" id="bridge" checked>
-              <label class="form__label form__label--select" for="bridge">Мост Дьявола</label>
+              <label class="form__label form__label--attraction" for="bridge">Мост Дьявола</label>
             </div>
             <div class="form__inner form__inner--attraction">
               <input class="form__input visually-hidden" type="checkbox" name="mountain" id="mountain" checked>
-              <label class="form__label form__label--select" for="mountain">Гора-Колокол</label>
+              <label class="form__label form__label--attraction" for="mountain">Гора-Колокол</label>
             </div>
             <div class="form__inner form__inner--attraction">
               <input class="form__input visually-hidden" type="checkbox" name="slide-park" id="slide-park" checked>
-              <label class="form__label form__label--select" for="slide-park">Слайд-парк</label>
+              <label class="form__label form__label--attraction" for="slide-park">Слайд-парк</label>
             </div>
             <div class="form__inner form__inner--attraction">
               <input class="form__input visually-hidden" type="checkbox" name="red-rocks" id="red-rocks">
-              <label class="form__label form__label--select" for="red-rocks">Красные скалы</label>
+              <label class="form__label form__label--attraction" for="red-rocks">Красные скалы</label>
             </div>
           </fieldset>
           <fieldset class="form__item form__item--textarea">
