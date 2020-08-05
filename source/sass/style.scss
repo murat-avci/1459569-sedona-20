@@ -1,5 +1,6 @@
 // Blocks
 @import "fonts";
+@import "global";
 @import "blocks/page";
 @import "blocks/page-header";
 @import "blocks/site-list";
@@ -11,7 +12,6 @@
 @import "blocks/copyright";
 @import "blocks/city-sublist";
 @import "blocks/page-photo";
-@import "global";
 @import "blocks/photo";
 @import "blocks/hotel-search";
 @import "blocks/button";
@@ -19,4 +19,4 @@
 @import "blocks/form";
 @import "blocks/video-presentation";
 @import "blocks/presentation";
-@import "blocks/site-video"
+@import "blocks/site-video";
