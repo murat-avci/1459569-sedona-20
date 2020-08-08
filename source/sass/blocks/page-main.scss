@@ -1,5 +1,47 @@
 .page-main {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6px;
+  background-color: $white;
+}
+
+.page-main__intro {
+  width: 268px;
+  padding: 26px 26px 13px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.page-main__intro::after {
+  content: url("/img/bg-triangle.svg");
+  position: absolute;
+  bottom: -36px;
+  left: 0;
+}
+
+.page-main__text {
+  font-size: 18px;
+  line-height: 26px;
   text-align: center;
-  color: var(--text-main);
-  padding-top: 50px;
+  margin-bottom: 27px;
+}
+
+.page-main__description {
+  line-height: 26px;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__intro {
+    width: 528px;
+    padding: 34px 120px 37px;
+  }
+
+  .page-main__text {
+    font-size: 21px;
+  }
+
+  .page-main__intro::after {
+    display: none;
+  }
 }

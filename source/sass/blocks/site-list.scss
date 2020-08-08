@@ -1,7 +1,5 @@
 .site-list {
-  display: inline-block;
   width: 320px;
-  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -15,4 +13,16 @@
   color: var(--text-accent);
   background-color: var(--main);
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    width: 1200px;
+  }
 }
