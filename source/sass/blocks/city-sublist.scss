@@ -3,42 +3,29 @@
   background-color: var(--text-accent);
   color: var(--text-main);
   margin: 0;
-  padding-left: 0;
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-right: 40px;
+  padding-left: 70px;
 }
 
-.city-sublist__title {
-  font-size: 18px;
-  line-height: 26px;
-  margin-bottom: 21px;
-  padding: 0;
-  color: var(--text-main);
-}
-
-.city-sublist__description {
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: normal;
-  color: var(--description);
+@media (min-width: $tablet-width) {
+  .city-sublist {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .city-sublist__item {
+  display: block;
   position: relative;
-  margin-left: 0;
-  margin-bottom: 26px;
-  margin-right: 20px;
-  padding-left: 70px;
   text-align: left;
 
   &::before {
     position: absolute;
     content: "";
-    top: 0;
-    left: 21px;
-    transform: translateY(-8px);
+    transform: translate(-51px, -8px);
     width: 40px;
     height: 37px;
     background-repeat: no-repeat;
@@ -57,5 +44,44 @@
   &--food::before {
     background-image: url("../img/icon-burger.svg");
     background-size: 40px 35px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .city-sublist__item {
+    text-align: center;
+    margin-top: 158px;
+    margin-bottom: 59px;
+  }
+}
+
+.city-sublist__title {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 21px;
+  padding: 0;
+  color: var(--text-main);
+}
+
+@media (min-width: $tablet-width) {
+  .city-sublist__title {
+    font-size: 21px;
+  }
+}
+
+.city-sublist__description {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: var(--description);
+}
+
+@media (min-width: $tablet-width) {
+  .city-sublist__description {
+    font-weight: normal;
+    padding: 0 10px;
+    text-align: center;
   }
 }

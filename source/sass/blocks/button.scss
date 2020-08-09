@@ -13,3 +13,9 @@
   color: var(--text-accent);
   padding: 0 15px;
 }
+
+@media (min-width: $tablet-width) {
+  .button {
+    padding: 16px 121px;
+  }
+}
