@@ -1,5 +1,5 @@
 .site-list {
-  width: 320px;
+  width: auto;
   padding: 0;
   margin: 0;
 }
@@ -17,12 +17,12 @@
 
 @media (min-width: $tablet-width) {
   .site-list {
-    width: 768px;
+    width: auto;
   }
 }
 
 @media (min-width: $desktop-width) {
   .site-list {
-    width: 1200px;
+    width: auto;
   }
 }
