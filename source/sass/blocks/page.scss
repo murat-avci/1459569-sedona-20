@@ -1,17 +1,27 @@
-
 .page {
   height: 100%;
   font-family: "PTSans", "Tahoma", sans-serif;
   text-transform: uppercase;
   padding: 0;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .page__body {
-  min-height: 100%;
-  margin: 0;
+  height: 100%;
+  margin: 0 auto;
   padding: 0;
   background-color: var(--text-accent);
-  max-width: auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.page__container {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  outline: 1px solid yellow;
 }
 
 @media (min-width: $tablet-width) {
