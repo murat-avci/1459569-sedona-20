@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   background-color: lightblue;
+  margin: 0;
 }
 
 .page-header__logo {
@@ -10,9 +11,9 @@
   height: 84px;
 }
 
-.page-header__intro {
-  width: 282px;
-  height: 214px;
+.page-header__sedona {
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: $tablet-width) {

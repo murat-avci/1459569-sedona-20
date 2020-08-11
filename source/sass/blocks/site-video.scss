@@ -1,14 +1,23 @@
+.site-video {
+  margin-bottom: 49px;
+}
+
+.site-video img {
+  width: 100%;
+  height: auto;
+}
+
 .site-video__controls {
-  width: 280px;
-  margin: 0 auto;
+  width: auto;
+  margin: 0 20px;
 }
 
 .site-video__slider {
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
   height: 45px;
-  width: 280px;
-  margin: -50px 0 0;
+  width: 100%;
+  margin: -49px 0 23px;
 }
 
 .site-video__slider::before {
@@ -16,7 +25,7 @@
   position: absolute;
   top: 23px;
   left: 22px;
-  width: 236px;
+  width: 180px;
   height: 3px;
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -37,9 +46,12 @@
 }
 
 .site-video__buttons {
+  position: absolute;
+  transform: translateY(45px);
   display: flex;
+  width: 100%;
   justify-content: flex-start;
-  background-color: var(--input);
+  background-color: $concrete;
 }
 
 .site-video__replay {
@@ -71,4 +83,180 @@
 .site-video__fullscreen svg {
   padding: 20px 12px;
   fill: var(--special2);
+}
+
+@media (min-width: $tablet-width) {
+  .site-video img {
+    width: 100%;
+    height: auto;
+  }
+
+  .site-video__controls {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .site-video__slider {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 93px;
+    width: 100%;
+    margin: -97px 0 0;
+  }
+
+  .site-video__slider::before {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 93px;
+    right: 166px;
+    width: auto;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .site-video__toggle {
+    position: relative;
+  }
+
+  .site-video__toggle::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 204px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: var(--text-accent);
+  }
+
+  .site-video__buttons {
+    position: absolute;
+    display: flex;
+    transform: translateY(12px);
+    left: 0;
+    justify-content: space-evenly;
+    background-color: transparent;
+  }
+
+  .site-video__replay {
+    border: none;
+    margin-left: 35px;
+    background-color: transparent;
+  }
+
+  .site-video__replay path {
+    padding: 20px 17px;
+    fill: $white;
+  }
+
+  .site-video__subtitles {
+    border: none;
+    background-color: transparent;
+  }
+
+  .site-video__subtitles path {
+    padding: 20px 12px;
+    fill: $white;
+  }
+
+  .site-video__fullscreen {
+    border: none;
+    background-color: transparent;
+    margin-right: 41px;
+  }
+
+  .site-video__fullscreen polygon {
+    padding: 20px 12px;
+    fill: $white;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-video img {
+    width: 100%;
+    height: auto;
+  }
+
+  .site-video__controls {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .site-video__slider {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 93px;
+    width: 100%;
+    margin: -97px 0 0;
+  }
+
+  .site-video__slider::before {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 93px;
+    right: 166px;
+    width: auto;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .site-video__toggle {
+    position: relative;
+  }
+
+  .site-video__toggle::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 204px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: var(--text-accent);
+  }
+
+  .site-video__buttons {
+    position: absolute;
+    display: flex;
+    transform: translateY(12px);
+    left: 0;
+    justify-content: space-evenly;
+    background-color: transparent;
+  }
+
+  .site-video__replay {
+    border: none;
+    margin-left: 35px;
+    background-color: transparent;
+  }
+
+  .site-video__replay path {
+    padding: 20px 17px;
+    fill: $white;
+  }
+
+  .site-video__subtitles {
+    border: none;
+    background-color: transparent;
+  }
+
+  .site-video__subtitles path {
+    padding: 20px 12px;
+    fill: $white;
+  }
+
+  .site-video__fullscreen {
+    border: none;
+    background-color: transparent;
+    margin-right: 41px;
+  }
+
+  .site-video__fullscreen polygon {
+    padding: 20px 12px;
+    fill: $white;
+  }
 }

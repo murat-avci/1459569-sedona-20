@@ -3,12 +3,36 @@
   height: 100%;
   font-family: "PTSans", "Tahoma", sans-serif;
   text-transform: uppercase;
+  padding: 0;
 }
 
 .page__body {
   min-height: 100%;
-  margin: 0 40px;
+  margin: 0;
   padding: 0;
   background-color: var(--text-accent);
   max-width: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .page {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .page__body {
+    margin: 0 60px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .page {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .page__body {
+    margin: 0 120px;
+  }
 }

@@ -1,7 +1,13 @@
 .page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   padding-top: 39px;
   padding-bottom: 26px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .page-footer__hashtag {
@@ -17,7 +23,8 @@
 }
 
 .page-footer__copyright {
-  margin: 0 auto;
+  text-align: center;
+  margin: 0 0 126px 0;
 }
 
 @media (min-width: $tablet-width) {

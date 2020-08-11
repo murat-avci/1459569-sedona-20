@@ -1,9 +1,12 @@
 .copyright {
   position: relative;
+  align-items: center;
   color: var(--text-main);
   text-transform: uppercase;
   font-size: 14px;
   line-height: 26px;
+  box-sizing: border-box;
+  width: auto;
 
   &::after {
     content: "";

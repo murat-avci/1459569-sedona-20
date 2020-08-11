@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -65,13 +65,15 @@
           </fieldset>
           <fieldset class="form__item form__item--contact">
             <legend class="form__title form__title--contact">Контактная информация:</legend>
-            <div class="form__inner form__inner--contact">
-              <label class="form__label form__label--contact" for="phone">Контактный телефон<sup>*</sup>:</label>
-              <input class="form__input form__input--contact" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
-            </div>
-            <div class="form__inner form__inner--contact">
-              <label class="form__label form__label--contact" for="email">Электронная почта<sup>*</sup>:</label>
-              <input class="form__input form__input--contact" type="email"  id="email" name="email" placeholder="Введите e-mail" required>
+            <div class="form__wrap form__wrap--contact">
+              <div class="form__inner form__inner--contact">
+                <label class="form__label form__label--contact" for="phone"><span class="desktop-hidden">Контактный</span> телефон<sup>*</sup>:</label>
+                <input class="form__input form__input--contact" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
+              </div>
+              <div class="form__inner form__inner--contact">
+                <label class="form__label form__label--contact" for="email">Электронная почта<sup>*</sup>:</label>
+                <input class="form__input form__input--contact" type="email"  id="email" name="email" placeholder="Введите e-mail" required>
+              </div>
             </div>
           </fieldset>
           <fieldset class="form__item form__item--impression">
@@ -91,21 +93,23 @@
           </fieldset>
           <fieldset class="form__item form__item--attraction">
             <legend class="form__title form__title--attraction">Посещенные достопримечательности:</legend>
-            <div class="form__inner form__inner--attraction">
-              <input class="form__input visually-hidden" type="checkbox" name="bridge" id="bridge" checked>
-              <label class="form__label form__label--attraction" for="bridge">Мост Дьявола</label>
-            </div>
-            <div class="form__inner form__inner--attraction">
-              <input class="form__input visually-hidden" type="checkbox" name="mountain" id="mountain" checked>
-              <label class="form__label form__label--attraction" for="mountain">Гора-Колокол</label>
-            </div>
-            <div class="form__inner form__inner--attraction">
-              <input class="form__input visually-hidden" type="checkbox" name="slide-park" id="slide-park" checked>
-              <label class="form__label form__label--attraction" for="slide-park">Слайд-парк</label>
-            </div>
-            <div class="form__inner form__inner--attraction">
-              <input class="form__input visually-hidden" type="checkbox" name="red-rocks" id="red-rocks">
-              <label class="form__label form__label--attraction" for="red-rocks">Красные скалы</label>
+            <div class="form__wrap">
+              <div class="form__inner form__inner--attraction">
+                <input class="form__input visually-hidden" type="checkbox" name="bridge" id="bridge" checked>
+                <label class="form__label form__label--attraction" for="bridge">Мост Дьявола</label>
+              </div>
+              <div class="form__inner form__inner--attraction">
+                <input class="form__input visually-hidden" type="checkbox" name="mountain" id="mountain" checked>
+                <label class="form__label form__label--attraction" for="mountain">Гора-Колокол</label>
+              </div>
+              <div class="form__inner form__inner--attraction">
+                <input class="form__input visually-hidden" type="checkbox" name="slide-park" id="slide-park" checked>
+                <label class="form__label form__label--attraction" for="slide-park">Слайд-парк</label>
+              </div>
+              <div class="form__inner form__inner--attraction">
+                <input class="form__input visually-hidden" type="checkbox" name="red-rocks" id="red-rocks">
+                <label class="form__label form__label--attraction" for="red-rocks">Красные скалы</label>
+              </div>
             </div>
           </fieldset>
           <fieldset class="form__item form__item--textarea">
@@ -114,6 +118,7 @@
           </fieldset>
           <div class="form__submit">
             <button class="form__button" type="submit" name="form__button">ОТПРАВИТЬ ОТЗЫВ</button>
+            <span class="form__required"><sup>*</sup> — обязательные поля</span>
           </div>
         </form>
       </section>
