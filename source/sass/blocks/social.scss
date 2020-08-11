@@ -36,10 +36,3 @@
     fill: $white;
   }
 }
-
-@media (min-width: $tablet-width) {
-  .social__list {
-    width: max-content;
-    margin: 0;
-  }
-}
