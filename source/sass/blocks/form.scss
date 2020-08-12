@@ -302,6 +302,15 @@
     }
   }
 
+  .form__wrap {
+    flex-wrap: nowrap;
+
+    &--contact {
+      justify-content: space-around;
+      align-items: baseline;
+    }
+  }
+
   .form__title {
     &--personal {
       margin-left: 79px;
@@ -371,12 +380,5 @@
     display: none;
     padding: 0;
     margin: 0;
-  }
-
-  .form__wrap {
-    &--contact {
-      justify-content: space-around;
-      align-items: baseline;
-    }
   }
 }

@@ -1,7 +1,9 @@
 .site-list {
-  box-sizing: border-box;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0;
+  list-style: none;
 }
 
 .site-list__link {
@@ -19,12 +21,22 @@
 
 @media (min-width: $tablet-width) {
   .site-list {
-    width: 768px;
+    box-sizing: border-box;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .site-list__link {
+    color: $black;
+    background-color: $white;
+    box-shadow: none;
   }
 }
 
 @media (min-width: $desktop-width) {
   .site-list {
-    width: 1200px;
+    width: 100%;
   }
 }

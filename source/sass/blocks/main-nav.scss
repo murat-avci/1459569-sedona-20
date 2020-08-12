@@ -4,22 +4,17 @@
 }
 
 .main-nav__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  box-sizing: border-box;
-  width: 100%;
-  list-style: none;
 }
 
 @media (min-width: $tablet-width) {
   .main-nav__wrapper {
-    display: flex;
-    justify-content: space-between;
-    min-width: 768px;
     margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 77px;
+    background-color: $white;
   }
 
   .main-nav__toggle {
@@ -33,7 +28,7 @@
 
 @media (min-width: $desktop-width) {
   .main-nav__wrapper {
-    min-width: 1200px;
+    margin: 0 auto;
   }
 
   .main-nav__list {

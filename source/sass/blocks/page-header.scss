@@ -5,7 +5,6 @@
   background-color: lightblue;
   margin: 0;
   box-sizing: border-box;
-  width: 100%;
 }
 
 .page-header__logo {
@@ -16,6 +15,12 @@
 .page-header__sedona {
   max-width: 100%;
   max-height: 214px;
+}
+
+.page-header__text-sedona {
+  width: 229px;
+  height: 39px;
+  margin: 52px 67px auto;
 }
 
 @media (min-width: $tablet-width) {
@@ -34,6 +39,12 @@
     max-width: 461px;
     max-height: 350px;
   }
+
+  .page-header__text-sedona {
+    width: 457px;
+    height: 78px;
+    margin: 95px 117px auto;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -47,5 +58,11 @@
   .page-header__intro {
     width: 460px;
     height: 350px;
+  }
+
+  .page-header__text-sedona {
+    width: 460px;
+    height: 80px;
+    margin: 101px 120px auto;
   }
 }
