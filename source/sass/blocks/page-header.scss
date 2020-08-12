@@ -14,8 +14,8 @@
 }
 
 .page-header__sedona {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: 214px;
 }
 
 @media (min-width: $tablet-width) {
@@ -28,6 +28,11 @@
   .page-header__intro {
     width: 460px;
     height: 350px;
+  }
+
+  .page-header__sedona {
+    max-width: 461px;
+    max-height: 350px;
   }
 }
 
