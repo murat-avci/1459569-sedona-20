@@ -31,23 +31,30 @@
   .page-footer__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
     align-items: center;
     padding-top: 36px;
     padding-bottom: 36px;
+    box-sizing: border-box;
+    width: 100%;
   }
 
   .page-footer__social {
     margin: 0 auto;
+    width: 100%;
   }
 
   .page-footer__hashtag {
+    justify-self: center;
+    align-items: center;
     margin: 0 auto;
+    width: 100%;
   }
 
   .page-footer__copyright {
     margin: 0 auto;
+    width: 100%;
   }
 
   .page-footer {
