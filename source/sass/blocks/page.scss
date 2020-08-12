@@ -1,14 +1,22 @@
-
 .page {
   height: 100%;
   font-family: "PTSans", "Tahoma", sans-serif;
   text-transform: uppercase;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .page__body {
-  min-height: 100%;
-  margin: 0 40px;
+  height: 100%;
+  margin: 0 auto;
   padding: 0;
   background-color: var(--text-accent);
-  max-width: auto;
+  overflow-x: hidden;
+}
+
+@media (min-width: $desktop-width) {
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }

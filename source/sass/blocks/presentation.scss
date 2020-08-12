@@ -20,3 +20,29 @@
   font-weight: normal;
   color: var(--description);
 }
+
+@media (min-width: $tablet-width) {
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 101px;
+  }
+
+  .presentation-title {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 177px;
+  }
+
+  .presentation-title {
+    font-size: 30px;
+  }
+}

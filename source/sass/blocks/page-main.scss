@@ -1,12 +1,16 @@
 .page-main {
   display: flex;
   flex-direction: column;
-  margin-bottom: 6px;
   background-color: $white;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .page-main__intro {
-  width: 268px;
+  box-sizing: border-box;
+  width: 100%;
   padding: 26px 26px 13px;
   position: relative;
   margin: 0 auto;
@@ -33,7 +37,7 @@
 
 @media (min-width: $tablet-width) {
   .page-main__intro {
-    width: 528px;
+    min-width: 528px;
     padding: 34px 120px 37px;
   }
 

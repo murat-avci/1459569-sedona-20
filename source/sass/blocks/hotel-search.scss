@@ -4,7 +4,7 @@
   align-items: center;
   text-align: center;
   padding: 0;
-  margin: 0 27px auto;
+  margin: 0 auto;
 }
 
 .hotel-search__title {
@@ -27,12 +27,12 @@
 
 .hotel-search__map {
   position: relative;
-  min-height: 350px;
+  height: auto;
 }
 
-
-.hotel-search__bg-map {
+.hotel-search__map img {
   margin: 0 auto;
+  width: 100%;
 }
 
 .hotel-search__frame-border {
@@ -40,8 +40,8 @@
   z-index: 2;
   top: 0;
   border: none;
-  min-height: 350px;
-  min-width: 320px;
+  height: 100%;
+  width: 100%;
 }
 
 .hotel-search__wrapper {
