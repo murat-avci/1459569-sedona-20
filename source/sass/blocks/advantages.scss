@@ -1,14 +1,32 @@
 .advantages {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   margin: 0;
   width: auto;
 }
 
 .advantages__wrapper {
+  position: relative;
   margin: 0;
-  padding: 0;
+  padding-top: 0;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12vw;
+    width: 100vw;
+    content: "";
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      background-image: none;
+    }
+  }
 }
 
 .advantages__list {
@@ -19,8 +37,6 @@
 }
 
 .advantages__item {
-  display: flex;
-  flex-direction: column;
   padding-bottom: 24px;
   border-bottom: 1px solid #d6d6d6;
 
@@ -28,52 +44,45 @@
     border-bottom: none;
   }
 
-  &--city {
-    padding-bottom: 0;
-    color: var(--text-accent);
-    border-bottom: none;
-    min-width: auto;
-    min-height: 211px;
-  }
-
+  &--city,
   &--bridge {
     padding-bottom: 0;
     color: var(--text-accent);
     border-bottom: none;
+    min-width: 320px;
+    min-height: auto;
   }
 }
 
 .advantages__real-city {
   padding: 35px 50px 35px 70px;
-  min-height: 330px;
+  min-height: auto;
 }
 
 .advantages__item-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
   background-color: var(--main);
   width: 100%;
-  padding-top: 2%;
+  height: auto;
+  padding: 21% 12px 39px 13px;
+
+  &--bridge {
+    padding: 39px 16px 35px 15px;
+  }
 }
 
 .advantages__title {
-  text-align: center;
   color: var(--text-main);
   font-size: 18px;
   font-weight: bold;
   line-height: 26px;
 
-  &--city {
-    padding-top: 0;
-    padding-bottom: 11px;
-    color: var(--text-accent);
-  }
-
+  &--city,
   &--bridge {
-    color: var(--text-accent);
     padding-top: 0;
-    padding-bottom: 11px;
+    padding-bottom: 5px;
+    color: var(--text-accent);
   }
 }
 
@@ -83,10 +92,7 @@
   font-weight: normal;
   line-height: 21px;
 
-  &--city {
-    color: var(--text-accent);
-  }
-
+  &--city,
   &--bridge {
     color: var(--text-accent);
   }
@@ -94,22 +100,13 @@
 
 .advantages__description {
   color: var(--description);
-  margin: 0 24px 26px;
-  padding-top: 16px;
-  padding-bottom: 24px;
+  margin: 0 auto;
 
-  &--city {
-    color: var(--text-accent);
-    margin: 0;
-    padding-top: 16px;
-    padding-bottom: 39px;
-  }
-
+  &--city,
   &--bridge {
     color: var(--text-accent);
     margin: 0;
-    padding-top: 16px;
-    padding-bottom: 35px;
+    margin-top: 8px;
   }
 }
 
@@ -121,14 +118,16 @@
 
 .advantages__properties {
   background-color: $gallery;
-  padding: 0;
+  transform: translateY(-5.1%);
+  padding: 26px 20px 0 20px;
+  list-style: none;
 }
-
 
 @media (min-width: $tablet-width) {
   .advantages__responsive {
+    height: 256px;
+    width: calc((100% / 3) * 2);
     object-fit: cover;
-    max-height: 256px;
   }
 
   .advantages__properties {
@@ -137,30 +136,48 @@
     box-sizing: border-box;
     background-color: $gallery;
     min-height: 256px;
-    padding: 1px 47px 0 36px;
+
+    .advantages__item--area {
+      width: calc(100% / 3);
+      padding-top: 2%;
+      padding-bottom: 5%;
+
+      .advantages__title {
+        padding: 0 55px;
+      }
+
+      .advantages__description {
+        padding: 0 50px;
+      }
+
+      &:first-child {
+        .advantages__description {
+          padding: 0 30px;
+        }
+      }
+    }
   }
 
-  .advanced-item {
+  .advantages-item {
     display: flex;
     flex-direction: row;
     border-bottom: none;
 
-    &--area:first-child {
-      padding: 41px 34px 63px 33px;
-    }
-
     &--area:nth-child(2) {
       padding: 42px 48px 41px 46px;
+      width: calc(100% / 3);
     }
 
     &--area:last-child {
       padding: 42px 40px 42px 41px;
+      width: calc(100% / 3);
     }
   }
 
   .advantages__item-wrap {
     display: flex;
-    max-height: 256px;
+    height: auto;
+    width: 100%;
     margin: 0;
     padding: 0;
 
@@ -173,23 +190,25 @@
 
   .advantages__title {
     font-size: 21px;
-  }
 
-  .advantages__title--city {
-    height: 100%;
-    width: auto;
-    box-sizing: border-box;
-  }
+    &--city {
+      margin-bottom: 11px;
+    }
 
-  .advantages__title--bridge {
-    display: inline-block;
-    height: 100%;
-    width: auto;
-    box-sizing: border-box;
+    &--bridge {
+      margin-bottom: 10px;
+      display: inline-block;
+      height: auto;
+      width: auto;
+      box-sizing: border-box;
+    }
   }
 
   .advantages__item-title {
-    height: 100%;
-    width: auto;
+    width: calc(100% / 3);
+    height: auto;
+    margin: 0;
+    padding: 23px 36px 41px 36px;
+    box-sizing: border-box;
   }
 }

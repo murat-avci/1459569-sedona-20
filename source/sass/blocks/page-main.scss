@@ -2,25 +2,80 @@
   display: flex;
   flex-direction: column;
   background-color: $white;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   width: 100%;
+}
+
+.page-main__form {
+  padding: 0 20px;
 }
 
 .page-main__intro {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 26px 26px 13px;
   position: relative;
-  margin: 0 auto;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  margin: 0;
+  padding: 90px 0 85px 0;
+  width: auto;
+  height: auto;
+  background-color: var(--basic-gray2);
+  text-align: center;
+
+  &::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 7.9vw;
+    width: 100vw;
+    content: "";
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+  }
 }
 
-.page-main__intro::after {
-  content: url("/img/bg-triangle.svg");
-  position: absolute;
-  bottom: -36px;
-  left: 0;
+@media (min-width: $tablet-width) {
+  .page-main__intro {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    &::before {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 7.3vw;
+      width: 100vw;
+      content: "";
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
+      background-repeat: no-repeat;
+      background-size: 100vw;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__intro {
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    &::before {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(15%);
+      height: 67px;
+      width: 100%;
+      content: "";
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
 }
 
 .page-main__text {
@@ -38,7 +93,12 @@
 @media (min-width: $tablet-width) {
   .page-main__intro {
     min-width: 528px;
-    padding: 34px 120px 37px;
+    padding: 77px  0 91px 0;
+  }
+
+  .page-main__sedona {
+    min-width: 461px;
+    height: auto;
   }
 
   .page-main__text {

@@ -14,7 +14,7 @@
   border-bottom: 1px solid $mercury;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 20px 0 20px;
 
   &--personal {
     margin-top: 20px;
@@ -132,7 +132,7 @@
   align-items: center;
   box-sizing: border-box;
   width: 100%;
-  padding: 0;
+  padding: 0 20px 0 20px;
   margin: 0;
 }
 
@@ -147,7 +147,7 @@
   border: none;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 49px;
+  /*margin-bottom: 49px;*/
 }
 
 .form__required {

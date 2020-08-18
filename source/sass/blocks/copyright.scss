@@ -1,5 +1,7 @@
 .copyright {
+  display: flex;
   position: relative;
+  justify-content: center;
   align-items: center;
   color: var(--text-main);
   text-transform: uppercase;
@@ -7,29 +9,21 @@
   line-height: 26px;
   box-sizing: border-box;
   width: 100%;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 27px;
-    height: 35px;
-    background-image: url("../img/logo-htmlacademy.svg");
-    background-repeat: no-repeat;
-  }
+.copyright svg:hover,
+.copyright svg:focus {
+  fill: $halfbaked;
+}
 
-  &:hover::after,
-  &:focus::after {
-    background-image: url("../img/htmlacademy-hover.svg");
-  }
-
-  &:active::after {
-    background-image: url("../img/logo-htmlacademy.svg");
-    opacity: 0.3;
-  }
+.copyright svg:active {
+  fill: $black;
+  opacity: 30%;
 }
 
 .copyright__text {
   padding: 0 16px;
+
   font-size: 14px;
   font-weight: normal;
   line-height: 26px;

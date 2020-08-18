@@ -1,8 +1,9 @@
 .page-photo {
   text-transform: uppercase;
   text-align: center;
-  padding: 32px 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .page-photo__main-title {
@@ -26,11 +27,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .page-photo {
-    margin: 0 60px;
-    padding: 0;
-  }
-
   .page-photo__main-title {
     margin: 65px 155px;
     padding: 0 26px 16px;

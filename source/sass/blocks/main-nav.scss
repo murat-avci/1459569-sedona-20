@@ -1,37 +1,109 @@
-.main-nav {
-  order: -1;
-  width: 100%;
+.main-nav__toggle {
+  position: absolute;
+  right: 23px;
+  bottom: 17px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 22px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.main-nav__list {
-  margin: 0 auto;
-  padding: 0;
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 22px;
+  height: 4px;
+  background-color: $halfbaked;
+  box-shadow: 0 9px 0 0 $halfbaked, 0 18px 0 0 $halfbaked;
 }
 
-@media (min-width: $tablet-width) {
-  .main-nav__wrapper {
-    margin: 0 auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-bottom: 77px;
+.main-nav--opened .main-nav__close {
+  position: absolute;
+  right: 23px;
+  top: 17px;
+  width: 22.2px;
+  height: 22.2px;
+  border: none;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    top: 40%;
+    left: -5px;
+    width: 31.39px;
+    height: 4px;
     background-color: $white;
   }
 
-  .main-nav__toggle {
-    display: none;
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
   }
 
-  .main-nav__list {
-    order: 1;
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 60%;
+    cursor: pointer;
+  }
+
+  &:focus::before,
+  &:focus::after {
+    border: none;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 30%;
+    border: none;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .main-nav__wrapper {
-    margin: 0 auto;
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__close {
+    display: none;
   }
 
-  .main-nav__list {
-    order: 1;
+  .main-nav--closed .main-nav__wrapper {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    display: block;
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__toggle,
+  .main-nav__close {
+    display: none;
   }
 }

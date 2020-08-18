@@ -20,6 +20,15 @@
   &:last-child {
     margin-left: 6px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: $fountainblue;
+  }
+
+  &:active {
+    background-color: $steelblue;
+  }
 }
 
 .social__link {
@@ -34,5 +43,9 @@
 
   & path {
     fill: $white;
+  }
+
+  &:active path {
+    opacity: 30%;
   }
 }
