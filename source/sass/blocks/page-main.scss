@@ -8,10 +8,6 @@
   width: 100%;
 }
 
-.page-main__form {
-  padding: 0 20px;
-}
-
 .page-main__intro {
   position: relative;
   background-image: url("../img/bg-back-mobile@1x.jpg");
@@ -22,10 +18,10 @@
   padding: 90px 0 83px 0;
   width: auto;
   height: auto;
-  background-color: var(--basic-gray2);
+  background-color: $concrete;
   text-align: center;
 
-  &::after {
+  &::before {
     display: block;
     position: absolute;
     left: 0;
@@ -33,15 +29,13 @@
     height: 7.9vw;
     width: 100vw;
     content: "";
-    background-image: url("../img/bg-intro-triangle-mobile.svg");
+    background-image: url("../../img/bg-intro-triangle-mobile.svg");
     background-repeat: no-repeat;
     background-size: 100vw;
   }
 
+  &--form,
   &--photo {
-    position: relative;
-    background-image: url("../img/bg-back-mobile@1x.jpg");
-    background-position: 0 0;
     padding: 0;
     height: 158px;
 
@@ -61,6 +55,7 @@
     position: relative;
     background-image: url("../../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat;
+    background-position: 0 0;
     object-fit: cover;
     min-height: 155px;
     min-width: 528px;
@@ -71,13 +66,16 @@
       padding: 77px  0 85px 0;
     }
 
-    &--photo img {
-      display: block;
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, -13%);
-      width: 230px;
-      height: 100px;
+    &--form,
+    &--photo {
+      & img {
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -13%);
+        width: 230px;
+        height: 184px;
+      }
     }
 
     &::before {
@@ -111,7 +109,7 @@
 
 @media (min-width: $desktop-width) {
   .page-main__intro {
-    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-image: url("../../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 -217px;
     background-size: 1200px 518px;
@@ -129,7 +127,7 @@
       height: 67px;
       width: 100%;
       content: "";
-      background-image: url("../img/bg-intro-triangle-desktop.svg");
+      background-image: url("../../img/bg-intro-triangle-desktop.svg");
       background-repeat: no-repeat;
       background-size: 100%;
     }
