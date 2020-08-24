@@ -1,5 +1,8 @@
 .video-presentation {
-  padding-top: 32px;
+  display: block;
+  box-sizing: border-box;
+  padding: 0;
+  margin-top: 32px;
 }
 
 .video-presentation__title {
@@ -8,12 +11,12 @@
 
 @media (min-width: $tablet-width) {
   .video-presentation {
-    margin: 0 60px;
+    margin: 32px 59px 62px 61px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .video-presentation {
-    margin: 0 200px;
+    margin: 8px 200px 65px 200px;
   }
 }

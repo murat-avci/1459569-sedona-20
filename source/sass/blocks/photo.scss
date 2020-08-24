@@ -1,141 +1,189 @@
 .photo {
+  padding: 0;
   margin: 0;
-  padding: 0;
-}
-
-.photo__wrapper {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-}
-
-.photo__item {
   font-size: 14px;
   line-height: 24px;
   text-align: left;
-  border-bottom: 1px solid var(--special1);
-  padding: 23px 20px 15px 20px;
+}
 
-  &:first-child {
-    border-top: 1px solid $alto;
+.photo__wrapper {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.photo__wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.photo__item {
+  width: auto;
+  border-top: 1px solid rgba($color: $mercury, $alpha: 1);
+  padding: 22px 20px 0;
+
+  &--cactus {
+    .photo__wrap {
+      margin-top: -3px;
+      margin-left: 1px;
+    }
+  }
+
+  &--roads {
+    .photo__wrap {
+      margin-top: -3px;
+      margin-left: 1px;
+    }
+  }
+
+  &--bridge {
+    border-bottom: 1px solid rgba($color: $mercury, $alpha: 1);
+
+    .photo__wrap {
+      margin-top: -1px;
+      margin-left: 1px;
+    }
   }
 }
 
-.photo__item img {
-  display: block;
-  width: 100%;
-  height: auto;
+.photo__title {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: bold;
+  padding: 0;
+  margin-top: 11px;
+  margin-bottom: 0;
 }
 
 .photo__author {
-  display: block;
-  font-weight: normal;
-  font-style: initial;
+  font-size: inherit;
+  line-height: inherit;
   text-transform: initial;
+  color: $mineshaft;
+  padding: 0;
+  margin: 0;
 }
 
 .photo__likes {
   position: relative;
-  padding-left: 37px;
+  font-size: inherit;
+  line-height: inherit;
   font-weight: bold;
+  padding-left: 37px;
+  margin-bottom: 15px;
 
   &::before {
-    content: "";
     position: absolute;
-    top: 50%;
+    content: "";
+    background-image: url("../../img/icon-like.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    top: 0;
     left: 0;
-    transform: translateY(-50%);
     width: 23px;
     height: 21px;
-    background-image: url("../img/icon-like.svg");
-    background-repeat: no-repeat;
-    opacity: 0.3;
-  }
-}
-
-.photo__likes svg {
-  position: absolute;
-  margin-right: 20px;
-  transform: translateX(-37px);
-
-  & path {
-    fill: rgba($color: #000000, $alpha: 0.3);
+    opacity: 30%;
   }
 }
 
 @media (min-width: $tablet-width) {
-  .photo {
-    padding: 0 60px;
+  .photo__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 14px;
+    line-height: 24px;
+    margin: -6px 60px 0 60px;
   }
 
-  .photo__wrapper {
+  .photo__wrapper img {
     width: 100%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin-bottom: -11px;
   }
 
   .photo__item {
     width: 50%;
-    height: auto;
     padding: 0;
-    margin: 0;
-    border: none;
 
     &--sunset {
+      margin-bottom: 0;
       width: 100%;
     }
-  }
 
-  .photo__item img {
-    display: block;
-    height: auto;
-    object-fit: cover;
+    &--cactus {
+      .photo__info {
+        padding-top: 2px;
+        padding-left: -2px;
+      }
+    }
+
+    &--roads {
+      .photo__wrap {
+        background-color: $gray2;
+      }
+
+      .photo__info {
+        padding-top: 2px;
+        padding-left: -2px;
+      }
+    }
   }
 
   .photo__wrap {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    width: auto;
-    min-height: 80px;
-    padding-left: 20px;
-    padding-bottom: -5px;
     background-color: $concrete;
-  }
-
-  .photo__item--roads {
-    .photo__wrap {
-      background-color: $gray2;
-    }
-  }
-
-  .photo__info {
-    line-height: 10px;
-    margin-top: 22px;
-    margin-bottom: 15px;
+    width: 100%;
+    height: auto;
+    min-height: 80px;
+    margin-bottom: 0;
+    padding-top: 13px;
+    padding-left: 19px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
   }
 
   .photo__likes {
+    margin-bottom: 0;
+    padding-top: 11px;
+    margin-right: -3px;
     width: 53px;
+
+    &::before {
+      top: 11px;
+      left: 5px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .photo__wrapper {
     padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .photo__wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin-bottom: 0;
   }
 
   .photo__item {
     position: relative;
     width: calc(100% / 3);
     height: auto;
-    margin: 0;
+    border: none;
 
     .photo__wrap {
       background-color: rgba($color: #000000, $alpha: 0.3);
@@ -143,11 +191,24 @@
 
     &--sunset {
       width: 100%;
+      margin-bottom: 0;
     }
-  }
 
-  .photo__item img {
-    display: block;
+    &--cactus {
+      margin-bottom: 27px;
+    }
+
+    &--roads {
+      .photo__wrap {
+        margin-bottom: 27px;
+      }
+    }
+
+    &--bridge {
+      .photo__wrap {
+        transform: translateY(-27px);
+      }
+    }
   }
 
   .photo__wrap {
@@ -163,21 +224,36 @@
     background-color: rgba($color: #000000, $alpha: 0.3);
     box-sizing: border-box;
     width: 100%;
-    height: max-content;
+    min-height: max-content;
+    padding-top: 0;
   }
 
   .photo__info {
     line-height: 10px;
-    margin-top: 22px;
-    margin-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .photo__title {
     color: $white;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 1px;
+  }
+
+  .photo__author {
+    color: $white;
+    font-size: 14px;
+    line-height: 24px;
   }
 
   .photo__likes {
     color: $white;
+    margin-bottom: 15px;
+    margin-right: 0;
 
     &::before {
-      background-image: url("../img/icon-like(white).svg");
+      background-image: url("../../img/icon-like-desktop.svg");
       opacity: 1;
     }
   }

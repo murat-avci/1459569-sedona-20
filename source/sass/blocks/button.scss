@@ -4,13 +4,35 @@
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
-  background-color: var(--main);
+  background-color: $halfbaked;
   box-sizing: border-box;
+
+  &:hover {
+    background-color: $fountainblue;
+  }
+
+  &:active {
+    background-color: $steelblue;
+
+    .button__link {
+      opacity: 30%;
+    }
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: $mercury;
+
+  .button__link {
+    opacity: 100%;
+  }
 }
 
 .button__link {
   text-decoration: none;
-  color: var(--text-accent);
+  color: $white;
   margin: 0 15px;
 }
 

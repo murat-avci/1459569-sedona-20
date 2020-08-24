@@ -3,7 +3,7 @@
   box-sizing: border-box;
   width: auto;
   padding: 0 15px 0 15px;
-  margin: 32px 18px 11px 17px;
+  margin: 21px 18px 11px 17px;
 
   &--photo {
     text-align: center;
@@ -24,7 +24,7 @@
   font-size: 18px;
   line-height: 26px;
   color: $black;
-  margin-bottom: 23px;
+  margin-bottom: 31px;
 
   &--photo,
   &--form {
@@ -47,8 +47,12 @@
 
 @media (min-width: $tablet-width) {
   .main-title {
-    margin: 5.15% 16.14% 6.2% 16.14%;
+    margin: 26px auto 40px auto;
     padding: 0;
+
+    &--index {
+      margin: 32px 85px 40px 85px;
+    }
   }
 
   .main-title__text {
@@ -58,10 +62,12 @@
 
 @media (min-width: $desktop-width) {
   .main-title {
-    margin: 55px auto 41px auto;
+    margin: 44px 359px 27px 357px;
   }
 
   .main-title__text {
     font-size: 21px;
+    padding: 0;
+    margin-bottom: 30px;
   }
 }

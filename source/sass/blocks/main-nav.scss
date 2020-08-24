@@ -1,6 +1,6 @@
 .main-nav__toggle {
   position: absolute;
-  right: 23px;
+  right: 20px;
   bottom: 17px;
   border: none;
   background-color: transparent;
@@ -36,7 +36,7 @@
 
 .main-nav--opened .main-nav__close {
   position: absolute;
-  right: 23px;
+  right: 18px;
   top: 17px;
   width: 22.2px;
   height: 22.2px;
@@ -51,7 +51,7 @@
     vertical-align: middle;
     top: 40%;
     left: -5px;
-    width: 31.39px;
+    width: 28px;
     height: 4px;
     background-color: $white;
   }

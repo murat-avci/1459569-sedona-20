@@ -19,7 +19,7 @@
   background-position: 0 0;
   background-size: cover;
   margin: 0;
-  padding: 90px 0 85px 0;
+  padding: 90px 0 83px 0;
   width: auto;
   height: auto;
   background-color: var(--basic-gray2);
@@ -37,16 +37,54 @@
     background-repeat: no-repeat;
     background-size: 100vw;
   }
+
+  &--photo {
+    position: relative;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-position: 0 0;
+    padding: 0;
+    height: 158px;
+
+    & img {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -10%);
+      width: 230px;
+      height: 184px;
+      display: block;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
   .page-main__intro {
-    background-image: url("../img/bg-back-tablet@1x.jpg");
+    position: relative;
+    background-image: url("../../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    min-height: 155px;
+    min-width: 528px;
+    padding: 95px  0 28px 0;
+    margin: 0;
+
+    &--index {
+      padding: 77px  0 85px 0;
+    }
+
+    &--photo img {
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -13%);
+      width: 230px;
+      height: 100px;
+    }
 
     &::before {
       display: block;
       position: absolute;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       bottom: 0;
       height: 7.3vw;
       width: 100vw;
@@ -55,45 +93,6 @@
       background-repeat: no-repeat;
       background-size: 100vw;
     }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .page-main__intro {
-    background-image: url("../img/bg-back-desktop@1x.jpg");
-
-    &::before {
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      transform: translateY(15%);
-      height: 67px;
-      width: 100%;
-      content: "";
-      background-image: url("../img/bg-intro-triangle-desktop.svg");
-      background-repeat: no-repeat;
-      background-size: 100%;
-    }
-  }
-}
-
-.page-main__text {
-  font-size: 18px;
-  line-height: 26px;
-  text-align: center;
-  margin-bottom: 27px;
-}
-
-.page-main__description {
-  line-height: 26px;
-  text-align: center;
-}
-
-@media (min-width: $tablet-width) {
-  .page-main__intro {
-    min-width: 528px;
-    padding: 77px  0 91px 0;
   }
 
   .page-main__sedona {
@@ -108,4 +107,62 @@
   .page-main__intro::after {
     display: none;
   }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__intro {
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -217px;
+    background-size: 1200px 518px;
+    min-height: 155px;
+    min-width: 1200px;
+    padding: 105px  0 38px 0;
+    margin: 0;
+
+    &::before {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(15%);
+      height: 67px;
+      width: 100%;
+      content: "";
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    &--index {
+      min-height: 440px;
+      background-position: 0 0;
+      padding: 77px 0 0;
+
+      &::before {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 67px;
+        width: 100%;
+        content: "";
+        background-image: url("../img/bg-intro-triangle-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+}
+
+.page-main__text {
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  margin-bottom: 27px;
+}
+
+.page-main__description {
+  line-height: 26px;
+  text-align: center;
 }
