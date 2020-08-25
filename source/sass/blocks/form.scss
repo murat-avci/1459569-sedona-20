@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   margin: 0;
   padding: 0;
 }
@@ -50,13 +49,22 @@
 
 .form__title {
   font-size: 18px;
+  line-height: 26px;
   font-weight: bold;
+  text-align: center;
 }
 
 .form__label {
+  display: block;
   font-size: 14px;
+  line-height: 26px;
   font-weight: normal;
   padding-right: 13px;
+
+  &--contact {
+    margin-left: 26px;
+    margin-bottom: 8px;
+  }
 
   &--impression {
     font-weight: bold;
@@ -108,6 +116,8 @@
 
   &::placeholder {
     color: $black;
+    font-size: 18px;
+    line-height: 26px;
     font-weight: bold;
   }
 
@@ -123,6 +133,13 @@
     padding-left: 21px;
     margin-top: 0;
     font-weight: bold;
+  }
+}
+
+.form__input[type="radio"]:checked + .form__label {
+  &::before {
+    position: absolute;
+
   }
 }
 
@@ -162,9 +179,12 @@
   .form {
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 0 60px;
   }
 
   .form__item {
+    padding: 0;
+
     &--personal {
       order: 2;
       width: 50%;
@@ -217,6 +237,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+    padding: 0;
   }
 
   .form__button {
@@ -296,6 +317,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .form {
+    padding: 0 120px;
+  }
+
   .form__item {
     &--contact {
       padding-top: 72px;
