@@ -137,6 +137,7 @@
 }
 
 .form__required {
+  visibility: hidden;
   height: 0;
 }
 
@@ -151,10 +152,6 @@
   border: none;
   box-sizing: border-box;
   width: 100%;
-}
-
-.form__required {
-  visibility: hidden;
 }
 
 .desktop-tel {
