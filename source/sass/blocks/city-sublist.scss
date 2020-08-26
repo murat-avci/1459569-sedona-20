@@ -8,10 +8,13 @@
 @media (min-width: $tablet-width) {
   .city-sublist {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     padding: 0;
+    padding-top: 10px;
+    padding-bottom: 13px;
     margin: 0;
+    width: 100%;
+    max-height: 330px;
   }
 }
 
@@ -19,11 +22,18 @@
   display: block;
   position: relative;
   text-align: left;
+  padding-bottom: 11px;
+
+  &--souvenirs {
+    .city-sublist__title {
+      margin-top: 15px;
+    }
+  }
 
   &::before {
     position: absolute;
     content: "";
-    transform: translate(-51px, -8px);
+    transform: translate(-49px, -10px);
     width: 40px;
     height: 37px;
     background-repeat: no-repeat;
@@ -37,26 +47,100 @@
   &--souvenirs::before {
     background-image: url("../img/icon-gift.svg");
     background-size: 32px 38px;
+    transform: translate(-45px, -11px);
   }
 
-  &--food::before {
-    background-image: url("../img/icon-burger.svg");
-    background-size: 40px 35px;
+  &--food {
+    transform: translate(1px, -4px);
+
+    &::before {
+      background-image: url("../img/icon-burger.svg");
+      background-size: 40px 35px;
+      transform: translate(-52px, -4px);
+    }
   }
 }
 
 @media (min-width: $tablet-width) {
   .city-sublist__item {
+    width: calc(100% / 3);
     text-align: center;
     margin-top: 158px;
-    margin-bottom: 59px;
+    margin-bottom: 57px;
+    box-sizing: border-box;
+    padding: 0 22px 14px 20px;
+
+    &--home {
+      order: 1;
+
+      .city-sublist__title {
+        margin-top: 11px;
+        margin-bottom: 24px;
+      }
+    }
+
+    &--food {
+      order: 2;
+      padding: 0 40px 14px 40px;
+
+      .city-sublist__title {
+        margin-top: 18px;
+        margin-bottom: 26px;
+      }
+    }
+
+    &--souvenirs {
+      order: 3;
+      padding: 23px 20px 14px 21px;
+
+      .city-sublist__title {
+        margin-top: 5px;
+        margin-bottom: 24px;
+      }
+
+      .city-sublist__description {
+        margin-bottom: 15px;
+
+        & span {
+          white-space: nowrap;
+        }
+      }
+    }
+
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 76px;
+      height: 75px;
+      background-repeat: no-repeat;
+    }
+
+    &--home::before {
+      background-size: 75px 72px;
+      background-position: 0 0;
+      transform: translate(-39px, -86px);
+    }
+
+    &--food::before {
+      background-size: 75px 72px;
+      background-position: 0 0;
+      transform: translate(-39px, -77px);
+    }
+
+    &--souvenirs::before {
+      background-size: 75px 72px;
+      background-position: 0 0;
+      transform: translate(-40px, -105px);
+    }
   }
 }
 
 .city-sublist__title {
   font-size: 18px;
   line-height: 26px;
-  margin-bottom: 21px;
+  font-weight: bold;
+  margin-bottom: 16px;
   padding: 0;
   color: var(--text-main);
 }
@@ -81,5 +165,65 @@
     font-weight: normal;
     padding: 0 10px;
     text-align: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .city-sublist {
+    padding: 0;
+    margin: 0;
+    min-height: 330px;
+    padding-bottom: 13px;
+  }
+
+  .city-sublist__item {
+    padding-top: 143px;
+    margin-top: 0;
+    box-sizing: border-box;
+
+    .city-sublist__description {
+      padding: 0 45px;
+      box-sizing: border-box;
+    }
+
+    .city-sublist__title {
+      margin-bottom: 27px;
+    }
+
+    &--food {
+      .city-sublist__title {
+        margin-bottom: 26px;
+      }
+
+      .city-sublist__description {
+        padding: 0 15px 0 15px;
+      }
+    }
+
+    &--food::before {
+      transform: translate(-39px, -76px);
+    }
+
+    &--souvenirs {
+      margin-top: 26px;
+
+      .city-sublist__title {
+        margin-bottom: 22px;
+      }
+
+      .city-sublist__description {
+        display: block;
+        padding: 0 65px 0 62px;
+
+        & span {
+          white-space: nowrap;
+          padding-right: 0;
+        }
+      }
+
+      &::before {
+        transform: translate(-40px, -95px);
+      }
+    }
   }
 }

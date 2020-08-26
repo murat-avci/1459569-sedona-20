@@ -2,25 +2,165 @@
   display: flex;
   flex-direction: column;
   background-color: $white;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   width: 100%;
 }
 
 .page-main__intro {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 26px 26px 13px;
   position: relative;
-  margin: 0 auto;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  margin: 0;
+  padding: 95px 0 80px 0;
+  width: auto;
+  height: auto;
+  background-color: $concrete;
+  text-align: center;
+
+  &::before {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 7.9vw;
+    width: 100vw;
+    content: "";
+    background-image: url("../../img/bg-intro-triangle-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+  }
+
+  &--form,
+  &--photo {
+    padding: 3px 0 2px 0;
+    height: 158px;
+
+    & img {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -10%);
+      width: 230px;
+      height: 184px;
+      display: block;
+    }
+  }
 }
 
-.page-main__intro::after {
-  content: url("/img/bg-triangle.svg");
-  position: absolute;
-  bottom: -36px;
-  left: 0;
+@media (min-width: $tablet-width) {
+  .page-main__intro {
+    position: relative;
+    background-image: url("../../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    object-fit: cover;
+    min-height: 155px;
+    min-width: 528px;
+    padding: 95px  0 28px 0;
+    margin: 0;
+
+    &--index {
+      padding: 77px  0 85px 0;
+    }
+
+    &--form,
+    &--photo {
+      padding: 65px 0 65px 0;
+
+      & img {
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -13%);
+        width: 230px;
+        height: 184px;
+      }
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      height: 7.3vw;
+      width: 100vw;
+      content: "";
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
+      background-repeat: no-repeat;
+      background-size: 100vw;
+    }
+  }
+
+  .page-main__sedona {
+    min-width: 461px;
+    height: auto;
+  }
+
+  .page-main__text {
+    font-size: 21px;
+  }
+
+  .page-main__intro::after {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__intro {
+    background-image: url("../../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -217px;
+    background-size: 1200px 518px;
+    min-height: 155px;
+    min-width: 1200px;
+    padding: 105px  0 38px 0;
+    margin: 0;
+
+    &--photo {
+      padding: 74px  0 68px 0;
+    }
+
+    &--form {
+      padding: 74px  0 68px 0;
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(15%);
+      height: 67px;
+      width: 100%;
+      content: "";
+      background-image: url("../../img/bg-intro-triangle-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    &--index {
+      min-height: 440px;
+      background-position: 0 0;
+      padding: 77px 0 0;
+
+      &::before {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 67px;
+        width: 100%;
+        content: "";
+        background-image: url("../img/bg-intro-triangle-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
 }
 
 .page-main__text {
@@ -33,19 +173,4 @@
 .page-main__description {
   line-height: 26px;
   text-align: center;
-}
-
-@media (min-width: $tablet-width) {
-  .page-main__intro {
-    min-width: 528px;
-    padding: 34px 120px 37px;
-  }
-
-  .page-main__text {
-    font-size: 21px;
-  }
-
-  .page-main__intro::after {
-    display: none;
-  }
 }

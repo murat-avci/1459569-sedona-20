@@ -1,63 +1,87 @@
 .page-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
-  padding-top: 39px;
-  padding-bottom: 26px;
-  box-sizing: border-box;
-  width: 100%;
-  margin: 0;
+  padding-top: 14px;
+  padding-bottom: 22.9px;
+
+  &--photo {
+    margin-top: 110px;
+  }
+
+  &--form {
+    padding-top: 55px;
+  }
 }
 
 .page-footer__hashtag {
+  display: block;
   font-size: 21px;
-  font-weight: bold;
   line-height: 26px;
-  width: max-content;
-  margin: 0 auto;
-}
-
-.page-footer__social {
-  text-align: center;
+  font-weight: bold;
+  margin-bottom: 33.5px;
 }
 
 .page-footer__copyright {
-  text-align: center;
-  margin: 0;
+  display: block;
+  margin: 36px auto 0 auto;
 }
 
 @media (min-width: $tablet-width) {
-  .page-footer__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-around;
-    text-align: center;
-    align-items: center;
-    padding-top: 36px;
-    padding-bottom: 36px;
-    box-sizing: border-box;
-    width: 100%;
+  .page-footer {
+    padding: 17px 62px 36px 58px;
+    margin: 0;
+
+    &--photo {
+      padding: 0 62px 36px 58px;
+      margin-top: -2px;
+    }
+
+    &--form {
+      padding-top: 80px;
+
+      .page-footer__hashtag {
+        margin-top: 25px;
+      }
+    }
   }
 
-  .page-footer__social {
-    margin: 0 auto;
-    width: 100%;
+  .page-footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .page-footer__hashtag {
-    justify-self: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
+    width: auto;
+    padding-left: 2px;
+    padding-top: 2px;
+  }
+
+  .page-footer__social {
+    width: auto;
+    margin: 0;
+    padding: 0;
   }
 
   .page-footer__copyright {
-    margin: 0 auto;
-    width: 100%;
+    width: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    padding: 19px 120px 36px 120px;
+
+    &--photo {
+      padding: 40px 120px 36px 120px;
+    }
+
+    &--form {
+      padding: 84px 120px 36px 120px;
+    }
   }
 
-  .page-footer {
-    padding: 0;
+  .page-footer__hashtag {
+    margin-top: 25px;
+    margin-left: -4px;
   }
 }

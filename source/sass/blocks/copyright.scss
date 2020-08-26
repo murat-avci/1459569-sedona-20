@@ -1,36 +1,47 @@
 .copyright {
+  display: flex;
   position: relative;
+  justify-content: center;
   align-items: center;
-  color: var(--text-main);
+  color: $black;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 26px;
   box-sizing: border-box;
-  width: 100%;
+  width: auto;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 27px;
-    height: 35px;
-    background-image: url("../img/logo-htmlacademy.svg");
-    background-repeat: no-repeat;
-  }
+.copyright svg {
+  transform: translate(-3px, 3px);
+}
 
-  &:hover::after,
-  &:focus::after {
-    background-image: url("../img/htmlacademy-hover.svg");
-  }
+.copyright svg:hover,
+.copyright svg:focus {
+  fill: $halfbaked;
+}
 
-  &:active::after {
-    background-image: url("../img/logo-htmlacademy.svg");
-    opacity: 0.3;
-  }
+.copyright svg:active {
+  fill: $black;
+  opacity: 30%;
 }
 
 .copyright__text {
-  padding: 0 16px;
+  padding: 0;
+  padding-right: 15px;
   font-size: 14px;
-  font-weight: normal;
   line-height: 26px;
+  font-weight: normal;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    padding: 0;
+    margin: 17px -5px auto 90px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    transform: translateX(-2px);
+  }
 }
