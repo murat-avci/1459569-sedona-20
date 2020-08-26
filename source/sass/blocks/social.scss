@@ -54,3 +54,10 @@
     opacity: 30%;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .social {
+    margin-left: 80px;
+    margin-top: -6px;
+  }
+}

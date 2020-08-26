@@ -1,11 +1,15 @@
 .page-footer {
   text-align: center;
-  padding-top: 29px;
+  padding-top: 14px;
   padding-bottom: 22.9px;
-}
 
-.page-footer--photo {
-  margin-top: 115px;
+  &--photo {
+    margin-top: 110px;
+  }
+
+  &--form {
+    padding-top: 55px;
+  }
 }
 
 .page-footer__hashtag {
@@ -18,13 +22,26 @@
 
 .page-footer__copyright {
   display: block;
-  margin-top: 40px;
+  margin: 36px auto 0 auto;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    padding: 36px 60px 36px 60px;
+    padding: 17px 62px 36px 58px;
     margin: 0;
+
+    &--photo {
+      padding: 0 62px 36px 58px;
+      margin-top: -2px;
+    }
+
+    &--form {
+      padding-top: 80px;
+
+      .page-footer__hashtag {
+        margin-top: 25px;
+      }
+    }
   }
 
   .page-footer__wrapper {
@@ -35,6 +52,8 @@
 
   .page-footer__hashtag {
     width: auto;
+    padding-left: 2px;
+    padding-top: 2px;
   }
 
   .page-footer__social {
@@ -50,6 +69,19 @@
 
 @media (min-width: $desktop-width) {
   .page-footer {
-    padding: 36px 120px 36px 120px;
+    padding: 19px 120px 36px 120px;
+
+    &--photo {
+      padding: 40px 120px 36px 120px;
+    }
+
+    &--form {
+      padding: 84px 120px 36px 120px;
+    }
+  }
+
+  .page-footer__hashtag {
+    margin-top: 25px;
+    margin-left: -4px;
   }
 }

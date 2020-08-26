@@ -12,7 +12,7 @@
 
 .site-list__link {
   display: block;
-  padding: 9px 10px 6px;
+  padding: 10px 11px 5px 10px;
   font-size: 18px;
   line-height: 40px;
   font-weight: bold;
@@ -21,6 +21,10 @@
   text-decoration: none;
   text-align: center;
   background-color: $halfbaked;
+
+  &[href="#"] {
+    padding-top: 10px;
+  }
 
   &:hover,
   &:focus {
@@ -47,6 +51,12 @@
 .site-list__item {
   margin-bottom: 2px;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  &:nth-of-type(3) {
+    .site-list__link {
+      padding-bottom: 2px;
+    }
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -167,6 +177,26 @@
   .site-list__item {
     width: 19.92%;
     box-shadow: none;
+
+    &:first-child {
+      .site-list__link {
+        margin: auto 14px 2px 15px;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-right: 20.3%;
+
+      .site-list__link {
+        margin: auto 14px 2px 15px;
+      }
+    }
+
+    &:nth-child(3) {
+      .site-list__link {
+        margin: -2px 8px 2px 8px;
+      }
+    }
 
     &:nth-child(3) .site-list__link,
     &:nth-child(4) .site-list__link {

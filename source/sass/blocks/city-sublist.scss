@@ -10,6 +10,8 @@
     display: flex;
     align-items: center;
     padding: 0;
+    padding-top: 10px;
+    padding-bottom: 13px;
     margin: 0;
     width: 100%;
     max-height: 330px;
@@ -21,6 +23,12 @@
   position: relative;
   text-align: left;
   padding-bottom: 11px;
+
+  &--souvenirs {
+    .city-sublist__title {
+      margin-top: 15px;
+    }
+  }
 
   &::before {
     position: absolute;
@@ -54,15 +62,11 @@
 }
 
 @media (min-width: $tablet-width) {
-  .city-sublist {
-    padding-bottom: 13px;
-  }
-
   .city-sublist__item {
     width: calc(100% / 3);
     text-align: center;
     margin-top: 158px;
-    margin-bottom: 59px;
+    margin-bottom: 57px;
     box-sizing: border-box;
     padding: 0 22px 14px 20px;
 
@@ -87,7 +91,7 @@
 
     &--souvenirs {
       order: 3;
-      padding: 0 18px 14px 23px;
+      padding: 23px 20px 14px 21px;
 
       .city-sublist__title {
         margin-top: 5px;
@@ -127,7 +131,7 @@
     &--souvenirs::before {
       background-size: 75px 72px;
       background-position: 0 0;
-      transform: translate(-38px, -97px);
+      transform: translate(-40px, -105px);
     }
   }
 }
@@ -182,33 +186,43 @@
       box-sizing: border-box;
     }
 
+    .city-sublist__title {
+      margin-bottom: 27px;
+    }
+
     &--food {
       .city-sublist__title {
-        margin-bottom: 20px;
+        margin-bottom: 26px;
       }
 
       .city-sublist__description {
-        padding: 0 15px;
+        padding: 0 15px 0 15px;
       }
     }
 
     &--food::before {
-      transform: translate(-39px, -80px);
+      transform: translate(-39px, -76px);
     }
 
     &--souvenirs {
+      margin-top: 26px;
+
+      .city-sublist__title {
+        margin-bottom: 22px;
+      }
+
       .city-sublist__description {
         display: block;
-        padding: 0 77px 0 71px;
+        padding: 0 65px 0 62px;
 
         & span {
           white-space: nowrap;
-          padding-right: 65px;
+          padding-right: 0;
         }
       }
 
       &::before {
-        transform: translate(-41px, -86px);
+        transform: translate(-40px, -95px);
       }
     }
   }

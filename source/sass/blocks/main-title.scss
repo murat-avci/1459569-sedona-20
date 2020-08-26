@@ -2,8 +2,8 @@
   text-align: center;
   box-sizing: border-box;
   width: auto;
-  padding: 0 15px 0 15px;
-  margin: 21px 18px 11px 17px;
+  padding: 0 15px 0 16px;
+  margin: 22px 18px 11px 15px;
 
   &--photo {
     text-align: center;
@@ -13,7 +13,7 @@
 
   &--form {
     text-align: center;
-    padding: 0 9px 0 9px;
+    padding: 0 24px 0 4px;
     margin: 36px 6px 16px 8px;
     line-height: 24px;
     border-bottom: 1px solid $alto;
@@ -33,6 +33,10 @@
     margin-top: 0;
     margin-bottom: 28px;
   }
+
+  &--form {
+    padding-left: 5px;
+  }
 }
 
 .main-title__description {
@@ -42,6 +46,8 @@
 
   &--form {
     margin-bottom: 17px;
+    padding-left: 4px;
+    line-height: 24px;
   }
 }
 
@@ -53,21 +59,39 @@
     &--index {
       margin: 32px 85px 40px 85px;
     }
+
+    &--form {
+      margin: 62px 165px 40px 159px;
+    }
   }
 
   .main-title__text {
     font-size: 21px;
+
+    &--form {
+      font-size: 30px;
+      margin-bottom: 35px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-title {
     margin: 44px 359px 27px 357px;
+
+    &--form {
+      margin: 113px 378px 27px 376px;
+    }
   }
 
   .main-title__text {
     font-size: 21px;
     padding: 0;
     margin-bottom: 30px;
+
+    &--form {
+      font-size: 30px;
+      margin-bottom: 33px;
+    }
   }
 }
