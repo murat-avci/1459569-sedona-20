@@ -1,341 +1,237 @@
 .site-video {
-  margin-bottom: 0;
-  padding-bottom: 0;
+  padding: 0;
+  margin: 0;
 }
 
-.site-video img {
-  display: block;
+.site-video__video-poster {
+  position: relative;
+  padding: 0;
+  margin: 0;
+
+  & img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.site-video__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 20px;
+  margin: 0;
   width: 100%;
   height: auto;
 }
 
-.site-video__controls {
-  width: auto;
-  margin: 3px 20px 0 21px;
-}
-
 .site-video__slider {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 45px;
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 45px;
   width: 100%;
-  margin: -49px 0 23px;
 
   &::before {
-    content: "";
     position: absolute;
-    top: 23px;
-    left: 24px;
-    width: 83%;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc((22 / 280) * 100%);
+    width: calc(100% - (44 / 280) * 100%);
     height: 3px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
   }
 }
 
-.site-video__toggle {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 58px;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background-color: var(--text-accent);
-  }
+.site-video__volume-slider {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc((57.96 / 280) * 100%);
+  width: 9.07px;
+  height: 9.07px;
+  border-radius: 50%;
+  background-color: $white;
 }
 
 .site-video__buttons {
   position: absolute;
-  transform: translateY(45px);
+  top: 100%;
+  left: 0;
   display: flex;
-  width: 100%;
   justify-content: flex-start;
+  width: 100%;
+  padding: 23px 23px 21px 25px;
   background-color: $concrete;
 }
 
 .site-video__replay {
   border: none;
   background-color: transparent;
-}
+  padding: 0;
+  margin: 0;
 
-.site-video__replay svg {
-  padding: 21px 15px 19px 19px;
+  & svg {
+    & path {
+      fill: $shuttlegray;
+    }
 
-  & path {
-    fill: $shuttlegray;
-  }
+    &:hover path {
+      fill: $mineshaft;
+    }
 
-  &:hover path {
-    fill: $mineshaft;
-  }
-
-  &:active path {
-    opacity: 30%;
+    &:active path {
+      opacity: 30%;
+    }
   }
 }
 
 .site-video__subtitles {
   border: none;
   background-color: transparent;
+  padding: 0;
+  margin: 0;
   margin-left: auto;
-}
 
-.site-video__subtitles svg {
-  padding: 22px 12px 18px 12px;
+  & svg {
+    & path {
+      fill: $shuttlegray;
+    }
 
-  & path {
-    fill: $shuttlegray;
-  }
+    &:hover path {
+      fill: $mineshaft;
+    }
 
-  &:hover path {
-    fill: $mineshaft;
-  }
-
-  &:active path {
-    opacity: 30%;
+    &:active path {
+      opacity: 30%;
+    }
   }
 }
 
 .site-video__fullscreen {
   border: none;
   background-color: transparent;
-}
+  padding: 0;
+  margin-left: 31px;
 
-.site-video__fullscreen svg {
-  padding: 22px 18px 18px 6px;
+  & svg {
+    & polygon {
+      fill: $shuttlegray;
+    }
 
-  & polygon {
-    fill: $shuttlegray;
-  }
+    &:hover polygon {
+      fill: $mineshaft;
+    }
 
-  &:hover polygon {
-    fill: $mineshaft;
-  }
-
-  &:active polygon {
-    opacity: 30%;
+    &:active polygon {
+      opacity: 30%;
+    }
   }
 }
 
 @media (min-width: $tablet-width) {
-  .site-video {
-    position: relative;
-    padding: 0;
-    margin: 0;
-  }
-
-  .site-video img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
   .site-video__controls {
-    position: relative;
-    bottom: 42px;
+    position: absolute;
+    bottom: -1px;
     left: 0;
-    width: 100%;
-    height: auto;
     padding: 0;
-    margin: 0;
   }
 
   .site-video__slider {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 93px;
-    width: 100%;
-    align-self: center;
+    min-height: 93px;
+
+    &::before {
+      left: calc((93 / (768 - 120)) * 100%);
+      width: calc((389 / (768 - 120)) * 100%);
+      height: 3px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
   }
 
-  .site-video__slider::before {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 45px;
-    left: 93px;
-    right: 165px;
-    width: auto;
-    height: 3px;
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .site-video__toggle {
-    position: relative;
-  }
-
-  .site-video__toggle::after {
-    content: "";
-    position: absolute;
-    top: 40px;
-    left: 199px;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background-color: $white;
+  .site-video__volume-slider {
+    left: calc((205.96 / (768 - 120)) * 100%);
   }
 
   .site-video__buttons {
     position: absolute;
-    display: flex;
-    transform: translate(26px, 12px);
-    left: 0;
-    justify-content: space-evenly;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 35px 41px 34px 35px;
     background-color: transparent;
   }
 
   .site-video__replay {
-    border: none;
-    margin-left: 35px;
-    background-color: transparent;
-    transform: translate(-52px, 2px);
-  }
+    & svg {
+      & path {
+        fill: $white;
+      }
 
-  .site-video__replay svg {
-    & path {
-      padding: 20px 17px;
-      fill: $white;
-    }
+      &:hover path {
+        opacity: 60%;
+      }
 
-    &:hover path {
-      fill: rgba($color: $white, $alpha: 0.6);
-    }
-
-    &:active path {
-      fill: rgba($color: $white, $alpha: 0.3);
+      &:active path {
+        opacity: 30%;
+      }
     }
   }
 
   .site-video__subtitles {
-    border: none;
-    background-color: transparent;
-  }
+    & svg {
+      & path {
+        fill: $white;
+      }
 
-  .site-video__subtitles svg {
-    & path {
-      padding: 20px 12px;
-      fill: $white;
-    }
+      &:hover path {
+        opacity: 60%;
+      }
 
-    &:hover path {
-      fill: rgba($color: $white, $alpha: 0.6);
-    }
-
-    &:active path {
-      fill: rgba($color: $white, $alpha: 0.3);
+      &:active path {
+        opacity: 30%;
+      }
     }
   }
 
   .site-video__fullscreen {
-    border: none;
-    background-color: transparent;
-    margin-right: 41px;
-  }
+    margin-left: 31px;
 
-  .site-video__fullscreen svg {
-    & polygon {
-      padding: 20px 12px;
-      fill: $white;
-    }
+    & svg {
+      & polygon {
+        fill: $white;
+      }
 
-    &:hover polygon {
-      fill: rgba($color: $white, $alpha: 0.6);
-    }
+      &:hover polygon {
+        opacity: 60%;
+      }
 
-    &:active polygon {
-      fill: rgba($color: $white, $alpha: 0.3);
+      &:active polygon {
+        opacity: 30%;
+      }
     }
   }
 }
 
 @media (min-width: $desktop-width) {
-  .site-video img {
-    width: 100%;
-    height: auto;
-  }
-
   .site-video__controls {
-    position: relative;
-    width: 100%;
-    height: auto;
-    transform: translateY(-3px);
+    bottom: 0;
   }
 
   .site-video__slider {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 93px;
-    width: 100%;
+    &::before {
+      left: calc((93 / (1200 - 400)) * 100%);
+      width: calc((540 / (1200 - 400)) * 100%);
+      height: 3px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
   }
 
-  .site-video__slider::before {
-    content: "";
-    position: absolute;
-    top: 45px;
-    left: 93px;
-    right: 166px;
-    width: auto;
-    height: 3px;
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .site-video__toggle {
-    position: relative;
-  }
-
-  .site-video__toggle::after {
-    content: "";
-    position: absolute;
-    top: 41px;
-    left: 204px;
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background-color: var(--text-accent);
+  .site-video__volume-slider {
+    left: calc((205.96 / (1200 - 400)) * 100%);
   }
 
   .site-video__buttons {
-    position: absolute;
-    display: flex;
-    left: 0;
-    justify-content: space-evenly;
-    background-color: transparent;
-  }
-
-  .site-video__replay {
-    border: none;
-    margin-left: 35px;
-    background-color: transparent;
-    padding: 0 6px 17px 6px;
-  }
-
-  .site-video__replay path {
-
-    fill: $white;
-  }
-
-  .site-video__subtitles {
-    border: none;
-    background-color: transparent;
-    padding: 2px 0 20px 28px;
-  }
-
-  .site-video__subtitles path {
-    fill: $white;
-  }
-
-  .site-video__fullscreen {
-    border: none;
-    background-color: transparent;
-    margin-right: 41px;
-    padding: 0 10px 0 14px;
-    margin-top: -14px;
-  }
-
-  .site-video__fullscreen polygon {
-    fill: $white;
+    padding: 40px 42px 38px 35px;
   }
 }

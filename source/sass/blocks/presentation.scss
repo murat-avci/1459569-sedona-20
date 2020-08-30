@@ -30,16 +30,12 @@
   .presentation__title {
     font-size: 30px;
     line-height: 26px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .presentation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 0 160px;
   }
 

@@ -32,16 +32,3 @@
   line-height: 26px;
   font-weight: normal;
 }
-
-@media (min-width: $tablet-width) {
-  .copyright {
-    padding: 0;
-    margin: 17px -5px auto 90px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .copyright {
-    transform: translateX(-2px);
-  }
-}
