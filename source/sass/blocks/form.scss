@@ -204,8 +204,8 @@
       position: absolute;
       left: 17px;
       bottom: 9.5px;
-      width: 21px;
-      height: 13px;
+      width: 18px;
+      height: 9.5px;
     }
   }
 }
@@ -325,6 +325,107 @@ input[type="radio"] {
   height: 0;
 }
 
+.form__failure {
+  display: none;
+  position: absolute;
+  top: 1543px;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  padding: 41px 42px 35px 41px;
+  margin: 0;
+}
+
+.form__failure-title {
+  display: block;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 26px;
+}
+
+.form__failure-description {
+  font-size: 14px;
+  line-height: 24px;
+  color: $mineshaft;
+  padding: 0;
+  margin: 0;
+}
+
+.form__failure-close {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  color: $white;
+  background-color: $halfbaked;
+  padding: 19px 78px 13px 78px;
+  margin: 22px auto 0;
+}
+
+.form__success {
+  display: block;
+  z-index: 5;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  padding: 0;
+  margin: 0;
+}
+
+.form__success-title {
+  display: block;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 0;
+  margin: 30px auto 26px;
+}
+
+.form__success-description {
+  font-size: 14px;
+  line-height: 24px;
+  color: $mineshaft;
+  padding: 0 15px 24px;
+  margin: 0 39px 21px 37px;
+
+  & span {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+}
+
+.form__success-close {
+  padding: 20px;
+  margin: 0;
+  background-color: $concrete;
+  width: 100%;
+
+  & a {
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    color: $white;
+    background-color: $halfbaked;
+    padding: 18px 76px 14px 76px;
+    margin: 0;
+  }
+}
+
 .form__button {
   display: inline-block;
   padding: 16px 32px;
@@ -409,9 +510,13 @@ input[type="radio"] {
     &--attraction {
       grid-column-start: 1;
       grid-column-end: 3;
-      padding: 24px 50px 79px 81px;
+      padding: 0;
+      margin: 0;
       border: none;
       border-top: 1px solid $gray3;
+      padding-top: 58px;
+      padding-left: 95px;
+      padding-bottom: 79px;
       margin-bottom: 0;
     }
 
@@ -420,7 +525,7 @@ input[type="radio"] {
       grid-column-end: 3;
       border: none;
       border-top: 1px solid $gray3;
-      padding-top: 68px;
+      padding-top: 66px;
       margin-top: 0;
     }
   }
@@ -476,12 +581,14 @@ input[type="radio"] {
     }
 
     &--attraction {
-      padding-top: 2px 46px 0 47px;
-      width: 78%;
+      padding: 0 16.5px;
+      margin: 0;
+      width: 73%;
     }
 
     &--textarea {
-      padding: 4px 62px 0;
+      padding: 6px 62px 0;
+      width: 62%;
     }
   }
 
@@ -524,6 +631,7 @@ input[type="radio"] {
       &:nth-child(2),
       &:last-child {
         margin: 0;
+        margin-left: -18px;
       }
 
       &:nth-child(3),
@@ -555,11 +663,13 @@ input[type="radio"] {
 
     &--attraction {
       &[for="mountain"] {
-        padding-left: 83px;
+        padding-left: 82px;
+        padding-top: 1px;
       }
 
       &[for="slide-park"],
       &[for="red-rocks"] {
+        padding-top: 2px;
         margin-bottom: 0;
       }
     }
@@ -580,39 +690,90 @@ input[type="radio"] {
     }
 
     &--textarea {
-      padding: 14px 18px 21px;
+      padding: 14px 17px 21px;
     }
   }
 
   .desktop-tel {
     visibility: hidden;
   }
+
+  .form__failure {
+    display: none;
+    top: 59.4%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    padding: 35px 47px 49px 46px;
+    margin: 0;
+  }
+
+  .form__failure-title {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0 35px;
+    margin-bottom: 26px;
+  }
+
+  .form__failure-close {
+    font-size: 21px;
+    padding: 18.5px 123px 13.5px 121px;
+    margin: 40px auto 0;
+  }
+
+  .form__success {
+    display: none;
+    position: absolute;
+    left: calc((64 / 768) * 100%);
+    width: 640px;
+    height: auto;
+  }
+
+  .form__success-title {
+    display: block;
+    font-size: 30px;
+    margin: 49px auto 26px;
+  }
+
+  .form__success-description {
+    padding: 0 15px 24px;
+    margin: 0 39px 26px 37px;
+  }
+
+  .form__success-close {
+    padding: 44px 91px;
+
+    & a {
+      font-size: 21px;
+      padding: 18.5px 155px 13.5px 154px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .form {
-    padding: 11px 120px 0 120px;
+    padding: 27.4px 120px 0 120px;
   }
 
   .form__item {
     &--personal {
-      padding-top: 54px;
-      padding-bottom: 65px;
+      padding-top: 55px;
+      padding-bottom: 67px;
     }
 
     &--contact {
-      padding-top: 61px;
+      padding-top: 60px;
       padding-bottom: 22px;
     }
 
     &--impression {
-      padding-bottom: 79px;
+      padding-bottom: 81px;
     }
 
     &--attraction {
       padding: 0;
-      padding-top: 23px;
-      padding-bottom: 57px;
+      padding-top: 21px;
+      padding-bottom: 55px;
       margin: 0;
       margin-top: 42px;
     }
@@ -688,11 +849,11 @@ input[type="radio"] {
       padding: 0;
 
       &:nth-child(2) {
-        transform: translateX(4px);
+        transform: translateX(10px);
       }
 
       &:nth-child(3) {
-        transform: translateX(9px);
+        transform: translateX(4px);
       }
 
       &:last-child {
@@ -762,20 +923,25 @@ input[type="radio"] {
   }
 
   .form__submit {
-    margin-top: 55px;
+    padding-top: 6px;
+    margin-top: 52px;
     margin-bottom: 69px;
   }
 
   .form__button {
     width: 50%;
     padding-left: 31px;
-    padding-top: 19px;
-    padding-bottom: 14px;
+    padding-top: 18px;
+    padding-bottom: 15px;
   }
 
   .form__input {
     &--personal {
       width: 50%;
+
+      &[name="surname"] {
+        margin-left: 2px;
+      }
 
       &[name="middle-name"] {
         margin-left: 3px;
@@ -786,6 +952,21 @@ input[type="radio"] {
     &--contact {
       width: 100%;
       margin-top: 8px;
+
+      &[name="phone"] {
+        margin-top: 5px;
+        padding-left: 16px;
+
+        &::placeholder {
+          font-size: 16px;
+          line-height: 26px;
+          letter-spacing: -0.2px;
+        }
+      }
+
+      &[name="email"] {
+        margin-top: 5px;
+      }
     }
 
     &--textarea {
