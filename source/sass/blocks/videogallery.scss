@@ -1,12 +1,20 @@
 .videogallery {
   margin: 0;
   padding: 0;
+  margin-bottom: 130px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 60px;
+    margin: 0 60px 44px 60px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 200px;
+    margin: -1px 200px 88px 200px;
+    padding: 0;
   }
+}
+
+.videogallery__video {
+  padding: 0;
+  margin: 0;
 }

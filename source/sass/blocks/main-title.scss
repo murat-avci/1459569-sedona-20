@@ -3,18 +3,12 @@
   box-sizing: border-box;
   width: auto;
   padding: 0 15px 0 16px;
-  margin: 22px 18px 11px 15px;
-
-  &--photo {
-    text-align: center;
-    padding: 0 12.5px 0 12.5px;
-    margin: 32px 9px 20px 12px;
-  }
+  margin: 22px 18px 13px 15px;
 
   &--form {
     text-align: center;
-    padding: 0 24px 0 4px;
-    margin: 36px 6px 16px 8px;
+    padding: 0 22px 0 6px;
+    margin: 36px auto 16px 14px;
     line-height: 24px;
     border-bottom: 1px solid $alto;
   }
@@ -26,16 +20,12 @@
   color: $black;
   margin-bottom: 31px;
 
-  &--photo,
   &--form {
     font-size: 18px;
     line-height: 26px;
+    padding-left: 5px;
     margin-top: 0;
     margin-bottom: 28px;
-  }
-
-  &--form {
-    padding-left: 5px;
   }
 }
 
@@ -57,11 +47,12 @@
     padding: 0;
 
     &--index {
-      margin: 32px 85px 40px 85px;
+      margin: 32px 85px 39px 85px;
     }
 
     &--form {
-      margin: 62px 165px 40px 159px;
+      margin: 62px 165px 68px 159px;
+      border-bottom: none;
     }
   }
 
@@ -77,10 +68,11 @@
 
 @media (min-width: $desktop-width) {
   .main-title {
-    margin: 44px 359px 27px 357px;
+    padding: 0;
+    margin: 42px 351px 43px 348px;
 
     &--form {
-      margin: 113px 378px 27px 376px;
+      margin: 111px 378px 31px 376px;
     }
   }
 
@@ -93,5 +85,11 @@
       font-size: 30px;
       margin-bottom: 33px;
     }
+  }
+
+  .main-title__description {
+    padding: 0;
+    margin: 0;
+    margin-left: 2px;
   }
 }
