@@ -372,7 +372,7 @@ input[type="radio"] {
 }
 
 .form__success {
-  display: block;
+  display: none;
   z-index: 5;
   width: 100%;
   height: auto;
@@ -753,6 +753,10 @@ input[type="radio"] {
 @media (min-width: $desktop-width) {
   .form {
     padding: 27.4px 120px 0 120px;
+
+    &::after {
+      top: 30px;
+    }
   }
 
   .form__item {
