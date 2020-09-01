@@ -23,7 +23,7 @@
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/bg-back-mobile@2x.jpg");
-    background-size: 902px auto;
+    background-size: 767px auto;
   }
 
   &::before {
@@ -45,6 +45,11 @@
     background-size: auto;
     padding: 0 0 2px 0;
     height: 158px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/bg-back-mobile@2x.jpg");
+      background-size: 767px auto;
+    }
 
     & img {
       position: absolute;
