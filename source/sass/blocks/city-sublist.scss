@@ -52,7 +52,7 @@
       &::before {
         top: -9px;
         left: -48px;
-        background-image: url("../../img/icon-house.svg");
+        background-image: url("../img/icon-house.svg");
         background-size: 39px 37px;
       }
     }
@@ -63,7 +63,7 @@
       &::before {
         top: -11px;
         left: -45px;
-        background-image: url("../../img/icon-gift.svg");
+        background-image: url("../img/icon-gift.svg");
         background-size: 32px 38px;
       }
     }
@@ -74,7 +74,7 @@
       &::before {
         top: -5px;
         left: -52px;
-        background-image: url("../../img/icon-burger.svg");
+        background-image: url("../img/icon-burger.svg");
         background-size: 40px 35px;
       }
     }
@@ -114,7 +114,7 @@
         top: calc((60 / 330) * 100%);
         left: 50%;
         transform: translateX(-50%);
-        background-image: url("../../img/icon-house.svg");
+        background-image: url("../img/icon-house.svg");
       }
     }
 
@@ -129,7 +129,7 @@
         top: calc((57 / 330) * 100%);
         left: 50%;
         transform: translateX(-43%);
-        background-image: url("../../img/icon-gift.svg");
+        background-image: url("../img/icon-gift.svg");
       }
     }
 
@@ -144,7 +144,7 @@
         top: calc((63 / 330) * 100%);
         left: 50%;
         transform: translateX(-51%);
-        background-image: url("../../img/icon-burger.svg");
+        background-image: url("../img/icon-burger.svg");
       }
     }
   }
