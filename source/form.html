@@ -129,18 +129,6 @@
               <legend class="form__title form__title--textarea">Опишите свои эмоции:</legend>
               <textarea class="form__input form__input--textarea" name="emotion" id="emotion" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
-            <div class="form__failure">
-              <h2 class="form__failure-title">ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
-              <p class="form__failure-description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-              <a class="form__failure-close" href="#">OK</a>
-            </div>
-            <div class="form__success">
-              <h2 class="form__success-title">Ваш отзыв отправлен!</h2>
-              <p class="form__success-description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <span>В ближайшее время мы</span> опубликуем его на сайте.</p>
-              <p class="form__success-close">
-                <a href="#">Закрыть окно</a>
-              </p>
-            </div>
             <div class="form__submit">
               <button class="form__button" type="submit" name="form__button">ОТПРАВИТЬ ОТЗЫВ</button>
               <span class="form__required"><sup>*</sup> — обязательные поля</span>
@@ -185,6 +173,20 @@
         </div>
       </footer>
     </div>
+    <article class="modal">
+      <div class="modal__failure">
+        <h2 class="modal__failure-title">ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
+        <p class="modal__failure-description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <a class="modal__failure-close" href="#">OK</a>
+      </div>
+      <div class="modal__success">
+        <h2 class="modal__success-title">Ваш отзыв отправлен!</h2>
+        <p class="modal__success-description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <span>В ближайшее время мы</span> опубликуем его на сайте.</p>
+        <p class="modal__success-close">
+          <a href="#">Закрыть окно</a>
+        </p>
+      </div>
+    </article>
     <script src="js/mobile-top-menu.js"></script>
   </body>
 </html>

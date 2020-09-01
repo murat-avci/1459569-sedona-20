@@ -325,107 +325,6 @@ input[type="radio"] {
   height: 0;
 }
 
-.form__failure {
-  display: none;
-  position: absolute;
-  top: 1543px;
-  left: 0;
-  z-index: 5;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  text-transform: uppercase;
-  background-color: $white;
-  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
-  padding: 41px 42px 35px 41px;
-  margin: 0;
-}
-
-.form__failure-title {
-  display: block;
-  font-size: 18px;
-  line-height: 26px;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 26px;
-}
-
-.form__failure-description {
-  font-size: 14px;
-  line-height: 24px;
-  color: $mineshaft;
-  padding: 0;
-  margin: 0;
-}
-
-.form__failure-close {
-  display: inline-block;
-  box-sizing: border-box;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: bold;
-  text-decoration: none;
-  color: $white;
-  background-color: $halfbaked;
-  padding: 19px 78px 13px 78px;
-  margin: 22px auto 0;
-}
-
-.form__success {
-  display: none;
-  z-index: 5;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  text-transform: uppercase;
-  background-color: $white;
-  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
-  padding: 0;
-  margin: 0;
-}
-
-.form__success-title {
-  display: block;
-  font-size: 18px;
-  line-height: 26px;
-  padding: 0;
-  margin: 30px auto 26px;
-}
-
-.form__success-description {
-  font-size: 14px;
-  line-height: 24px;
-  color: $mineshaft;
-  padding: 0 15px 24px;
-  margin: 0 39px 21px 37px;
-
-  & span {
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-  }
-}
-
-.form__success-close {
-  padding: 20px;
-  margin: 0;
-  background-color: $concrete;
-  width: 100%;
-
-  & a {
-    display: inline-block;
-    box-sizing: border-box;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: bold;
-    text-decoration: none;
-    color: $white;
-    background-color: $halfbaked;
-    padding: 18px 76px 14px 76px;
-    margin: 0;
-  }
-}
-
 .form__button {
   display: inline-block;
   padding: 16px 32px;
@@ -697,57 +596,6 @@ input[type="radio"] {
   .desktop-tel {
     visibility: hidden;
   }
-
-  .form__failure {
-    display: none;
-    top: 59.4%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 400px;
-    padding: 35px 47px 49px 46px;
-    margin: 0;
-  }
-
-  .form__failure-title {
-    font-size: 30px;
-    line-height: 40px;
-    margin: 0 35px;
-    margin-bottom: 26px;
-  }
-
-  .form__failure-close {
-    font-size: 21px;
-    padding: 18.5px 123px 13.5px 121px;
-    margin: 40px auto 0;
-  }
-
-  .form__success {
-    display: none;
-    position: absolute;
-    left: calc((64 / 768) * 100%);
-    width: 640px;
-    height: auto;
-  }
-
-  .form__success-title {
-    display: block;
-    font-size: 30px;
-    margin: 49px auto 26px;
-  }
-
-  .form__success-description {
-    padding: 0 15px 24px;
-    margin: 0 39px 26px 37px;
-  }
-
-  .form__success-close {
-    padding: 44px 91px;
-
-    & a {
-      font-size: 21px;
-      padding: 18.5px 155px 13.5px 154px;
-    }
-  }
 }
 
 @media (min-width: $desktop-width) {
@@ -961,6 +809,14 @@ input[type="radio"] {
         margin-top: 5px;
         padding-left: 16px;
 
+        &:hover {
+          padding-left: 19.7px;
+        }
+
+        &:active {
+          padding-left: 16px;
+        }
+
         &::placeholder {
           font-size: 16px;
           line-height: 26px;
@@ -970,6 +826,14 @@ input[type="radio"] {
 
       &[name="email"] {
         margin-top: 5px;
+      }
+
+      &:hover {
+        padding-left: 21px;
+      }
+
+      &:active {
+        padding-left: 18px;
       }
     }
 
