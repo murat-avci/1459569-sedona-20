@@ -72,19 +72,17 @@
   background-color: transparent;
   padding: 0;
   margin: 0;
+}
 
-  & svg {
-    & path {
-      fill: $shuttlegray;
-    }
+.site-video__replay-icon {
+  fill: $shuttlegray;
 
-    &:hover path {
-      fill: $mineshaft;
-    }
+  &:hover {
+    fill: $mineshaft;
+  }
 
-    &:active path {
-      fill: rgba($color: $mineshaft, $alpha: 0.3);
-    }
+  &:active {
+    fill: rgba($color: $mineshaft, $alpha: 0.3);
   }
 }
 
@@ -94,19 +92,17 @@
   padding: 0;
   margin: 0;
   margin-left: auto;
+}
 
-  & svg {
-    & path {
-      fill: $shuttlegray;
-    }
+.site-video__subtitles-icon {
+  fill: $shuttlegray;
 
-    &:hover path {
-      fill: $mineshaft;
-    }
+  &:hover {
+    fill: $mineshaft;
+  }
 
-    &:active path {
-      fill: rgba($color: $mineshaft, $alpha: 0.3);
-    }
+  &:active {
+    fill: rgba($color: $mineshaft, $alpha: 0.3);
   }
 }
 
@@ -128,6 +124,18 @@
     &:active polygon {
       fill: rgba($color: $mineshaft, $alpha: 0.3);
     }
+  }
+}
+
+.site-video__fullscreen-icon {
+  fill: $shuttlegray;
+
+  &:hover {
+    fill: $mineshaft;
+  }
+
+  &:active {
+    fill: rgba($color: $mineshaft, $alpha: 0.3);
   }
 }
 
@@ -164,32 +172,28 @@
   }
 
   .site-video__replay {
-    & svg {
-      & path {
-        fill: rgba($color: $white, $alpha: 1);
-      }
+    .site-video__replay-icon {
+      fill: rgba($color: $white, $alpha: 1);
 
-      &:hover path {
+      &:hover {
         fill: rgba($color: $white, $alpha: 0.6);
       }
 
-      &:active path {
+      &:active {
         fill: rgba($color: $white, $alpha: 0.3);
       }
     }
   }
 
   .site-video__subtitles {
-    & svg {
-      & path {
-        fill: $white;
-      }
+    .site-video__subtitles-icon {
+      fill: $white;
 
-      &:hover path {
+      &:hover {
         fill: rgba($color: $white, $alpha: 0.6);
       }
 
-      &:active path {
+      &:active {
         fill: rgba($color: $white, $alpha: 0.3);
       }
     }
@@ -198,16 +202,14 @@
   .site-video__fullscreen {
     margin-left: 31px;
 
-    & svg {
-      & polygon {
-        fill: $white;
-      }
+    .site-video__fullscreen-icon {
+      fill: $white;
 
-      &:hover polygon {
+      &:hover {
         fill: rgba($color: $white, $alpha: 0.6);
       }
 
-      &:active polygon {
+      &:active {
         fill: rgba($color: $white, $alpha: 0.3);
       }
     }
