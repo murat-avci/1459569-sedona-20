@@ -38,44 +38,42 @@
       margin-bottom: 26px;
     }
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: 40px;
-      height: 37px;
-      background-repeat: no-repeat;
-    }
-
     &--home {
       margin-right: 11px;
 
-      &::before {
+      .city-sublist__house-icon {
+        position: absolute;
         top: -9px;
         left: -48px;
-        background-image: url("../img/icon-house.svg");
-        background-size: 39px 37px;
+        width: 39px;
+        height: 37px;
+        fill: $halfbaked;
       }
     }
 
     &--souvenirs {
       margin-right: 21px;
 
-      &::before {
+      .city-sublist__gift-icon {
+        position: absolute;
         top: -11px;
         left: -45px;
-        background-image: url("../img/icon-gift.svg");
-        background-size: 32px 38px;
+        width: 32px;
+        height: 38px;
+        fill: $halfbaked;
       }
     }
 
     &--food {
       margin-right: 40px;
 
-      &::before {
+      .city-sublist__food-icon {
+        position: absolute;
         top: -5px;
         left: -52px;
-        background-image: url("../img/icon-burger.svg");
-        background-size: 40px 35px;
+        width: 40px;
+        height: 35px;
+        fill: $halfbaked;
       }
     }
   }
@@ -99,22 +97,15 @@
     height: 100%;
     width: auto;
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: 76px;
-      height: 75px;
-      background-repeat: no-repeat;
-    }
-
     &--home {
       padding: 158px 36px 40px 36px;
 
-      &::before {
+      .city-sublist__house-icon {
+        position: absolute;
         top: calc((60 / 330) * 100%);
         left: 50%;
         transform: translateX(-50%);
-        background-image: url("../img/icon-house.svg");
+        fill: $halfbaked;
       }
     }
 
@@ -125,11 +116,12 @@
       grid-row-end: 2;
       padding: 158px 32px 39px 32px;
 
-      &::before {
+      .city-sublist__gift-icon {
+        position: absolute;
         top: calc((57 / 330) * 100%);
         left: 50%;
         transform: translateX(-43%);
-        background-image: url("../img/icon-gift.svg");
+        fill: $halfbaked;
       }
     }
 
@@ -140,11 +132,12 @@
       grid-row-end: 2;
       padding: 158px 50px 61px 50px;
 
-      &::before {
+      .city-sublist__food-icon {
+        position: absolute;
         top: calc((63 / 330) * 100%);
         left: 50%;
         transform: translateX(-51%);
-        background-image: url("../img/icon-burger.svg");
+        fill: $halfbaked;
       }
     }
   }
@@ -178,7 +171,7 @@
     &--home {
       padding: 159px 60px 80px 58px;
 
-      &::before {
+      .city-sublist__house-icon {
         top: calc((59 / 330) * 100%);
       }
     }

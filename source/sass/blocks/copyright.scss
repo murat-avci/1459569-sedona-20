@@ -11,18 +11,18 @@
   width: auto;
 }
 
-.copyright svg {
+.copyright__htmlacademy-logo {
   transform: translate(-3px, 3px);
-}
 
-.copyright svg:hover,
-.copyright svg:focus {
-  fill: $halfbaked;
-}
+  &:hover,
+  &:focus {
+    fill: $halfbaked;
+  }
 
-.copyright svg:active {
-  fill: $black;
-  opacity: 30%;
+  &:active {
+    fill: $black;
+    opacity: 30%;
+  }
 }
 
 .copyright__text {

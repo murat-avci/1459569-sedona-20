@@ -33,6 +33,10 @@
 
   &:active {
     background-color: $steelblue;
+
+    .social__link-icon {
+      opacity: 30%;
+    }
   }
 }
 
@@ -46,12 +50,8 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  & path {
+  .social__link-icon {
     fill: $white;
-  }
-
-  &:active path {
-    opacity: 30%;
   }
 }
 
