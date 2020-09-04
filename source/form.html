@@ -81,11 +81,25 @@
               <div class="form__wrap form__wrap--contact">
                 <div class="form__inner form__inner--contact">
                   <label class="form__label form__label--contact" for="phone"><span class="desktop-hidden">Контактный</span> телефон<sup>*</sup>:</label>
-                  <input class="form__input form__input--contact" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
+                  <div class="form__input-wrap-phone">
+                    <input class="form__input form__input--contact" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
+                    <p>
+                      <svg class="form__phone-icon" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#icon-phone"></use>
+                      </svg>
+                    </p>
+                  </div>
                 </div>
                 <div class="form__inner form__inner--contact">
                   <label class="form__label form__label--contact" for="email">Электронная почта<sup>*</sup>:</label>
+                  <div class="form__input-wrap-mail">
                   <input class="form__input form__input--contact" type="email"  id="email" name="email" placeholder="Введите e-mail" required>
+                  <p>
+                    <svg class="form__mail-icon" width="16" height="16">
+                      <use xlink:href="img/sprite.svg#icon-mail"></use>
+                    </svg>
+                  </p>
+                  </div>
                 </div>
               </div>
             </fieldset>

@@ -64,12 +64,8 @@
   padding-left: 37px;
   margin-bottom: 15px;
 
-  &::before {
+  .photo__like-icon {
     position: absolute;
-    content: "";
-    background-image: url("../img/icon-like.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
     top: 0;
     left: 0;
     width: 23px;
@@ -130,7 +126,7 @@
     margin: 0;
     width: 89px;
 
-    &::before {
+    .photo__like-icon {
       top: 0;
       left: 5px;
     }
@@ -178,10 +174,10 @@
   .photo__likes {
     color: $white;
 
-    &::before {
+    .photo__like-icon {
       top: 1px;
       left: 5px;
-      background-image: url("../img/icon-like-desktop.svg");
+      fill: $white;
       opacity: 100%;
     }
   }

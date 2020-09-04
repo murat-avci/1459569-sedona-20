@@ -173,14 +173,14 @@
 
   .site-video__replay {
     .site-video__replay-icon {
-      fill: rgba($color: $white, $alpha: 1);
+      fill: $white;
 
       &:hover {
-        fill: rgba($color: $white, $alpha: 0.6);
+        fill: rgba(255, 255, 255, 0.6);
       }
 
       &:active {
-        fill: rgba($color: $white, $alpha: 0.3);
+        fill: rgba(255, 255, 255, 0.3);
       }
     }
   }
@@ -190,11 +190,11 @@
       fill: $white;
 
       &:hover {
-        fill: rgba($color: $white, $alpha: 0.6);
+        fill: rgba(255, 255, 255, 0.6);
       }
 
       &:active {
-        fill: rgba($color: $white, $alpha: 0.3);
+        fill: rgba(255, 255, 255, 0.3);
       }
     }
   }
@@ -206,11 +206,11 @@
       fill: $white;
 
       &:hover {
-        fill: rgba($color: $white, $alpha: 0.6);
+        fill: rgba(255, 255, 255, 0.6);
       }
 
       &:active {
-        fill: rgba($color: $white, $alpha: 0.3);
+        fill: rgba(255, 255, 255, 0.3);
       }
     }
   }
