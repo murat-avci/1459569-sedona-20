@@ -81,7 +81,6 @@
 
 @media (min-width: $tablet-width) {
   .city-sublist {
-    box-sizing: border-box;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -89,7 +88,6 @@
 
   .city-sublist__item {
     display: block;
-    box-sizing: border-box;
     position: relative;
     padding: 0;
     margin: 0;
@@ -143,7 +141,6 @@
   }
 
   .city-sublist__title {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-size: 21px;
@@ -152,7 +149,6 @@
   }
 
   .city-sublist__description {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-size: 14px;

@@ -79,7 +79,6 @@
   .advantages__real-city {
     display: grid;
     grid-template-columns: 1fr;
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
     height: auto;
@@ -87,7 +86,6 @@
 
   .advantages__item-title {
     text-align: center;
-    box-sizing: border-box;
     background-color: $halfbaked;
     width: 100%;
     height: auto;
@@ -99,7 +97,7 @@
   }
 
   .advantages__title {
-    color: var(--text-main);
+    color: $black;
     font-size: 18px;
     font-weight: bold;
     line-height: 26px;

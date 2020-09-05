@@ -8,7 +8,6 @@
 
 .form__item {
   line-height: 26px;
-  box-sizing: border-box;
   border: none;
   border-bottom: 1px solid $mercury;
   width: 100%;
@@ -58,7 +57,6 @@
     margin: 36px calc((105 / 320) * 100%) auto;
     margin-bottom: 36px;
     display: block;
-    box-sizing: border-box;
 
     & span {
       white-space: nowrap;
@@ -76,7 +74,6 @@
 
 .form__inner {
   padding: 0;
-  box-sizing: border-box;
 
   &--contact:not(:last-child) {
     margin-bottom: 10px;
@@ -86,7 +83,6 @@
     display: flex;
     margin-bottom: 20px;
     align-items: baseline;
-    box-sizing: border-box;
     width: 100%;
 
     &:last-child {
@@ -211,7 +207,6 @@
 }
 
 .form__input {
-  box-sizing: border-box;
   padding: 5px 0 0 18px;
   height: 58px;
   border: 4px solid $concrete;
@@ -263,7 +258,6 @@
   }
 
   &--textarea {
-    box-sizing: border-box;
     width: 100%;
     min-height: 160px;
     padding: 10px 5px 0 17px;
@@ -370,7 +364,6 @@ input[type="radio"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
   width: 100%;
   padding: 0 20px 0 20px;
   margin: 0;
@@ -393,7 +386,6 @@ input[type="radio"] {
   color: $white;
   background-color: $halfbaked;
   border: none;
-  box-sizing: border-box;
   width: 100%;
 
   &:hover {
@@ -720,7 +712,6 @@ input[type="radio"] {
     }
 
     &--attraction {
-      box-sizing: border-box;
       margin-top: 36px;
       padding: 0 15px;
       margin-bottom: 36px;
@@ -740,7 +731,6 @@ input[type="radio"] {
 
     &--contact {
       display: flex;
-      box-sizing: border-box;
       align-items: center;
       width: 50%;
 
