@@ -250,14 +250,9 @@
       padding-left: 22px;
     }
 
-    &:focus {
-      outline-color: transparent;
-    }
-
     &:active {
       background-color: $white;
       border: 4px solid $mercury;
-      outline: none;
       padding-left: 18px;
     }
   }
