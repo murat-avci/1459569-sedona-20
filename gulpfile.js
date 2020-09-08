@@ -11,6 +11,8 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del =require("del");
+const terser = require('gulp-terser');
+const htmlmin = require('gulp-htmlmin');
 
 // Styles
 
@@ -118,21 +120,35 @@ const watcher = () => {
 
 exports.default = gulp.series(styles, server, watcher);
 
-// Html
+//HTML
 
 const html = () => {
   return gulp.src(["source/**/*.html"], { base: "source" })
-    .pipe(gulp.dest("build"));
+    .pipe(plumber())
+    .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
+    .pipe(gulp.dest("build"))
+    .pipe(sync.stream());
 };
 
 exports.html = html;
 
 
+//JS
+
+const js = () => {
+  return gulp.src('source/js/mobile-top-menu.js')
+    .pipe(plumber())
+    .pipe(terser())
+    .pipe(rename("mobile-top-menu.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+};
+
+exports.js = js;
 
 // Build
 
-gulp.task("build", gulp.series(clean, copy, styles, images, webpImages, sprite, html));
-
+gulp.task("build", gulp.series(clean, copy, styles, images, webpImages, sprite, html, js));
 
 // Gulp start
 
