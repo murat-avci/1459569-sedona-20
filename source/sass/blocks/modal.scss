@@ -5,7 +5,7 @@
 
 .modal__failure {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   left: 0;
@@ -51,7 +51,7 @@
 
 .modal__success {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   left: 0;

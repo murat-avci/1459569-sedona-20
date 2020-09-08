@@ -39,7 +39,8 @@ const images = () => {
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.mozjpeg({progressive: true}),
       imagemin.svgo()
-    ]));
+    ]))
+    .pipe(gulp.dest("build/img"));
 };
 
 exports.images = images;
@@ -49,7 +50,7 @@ exports.images = images;
 const webpImages = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 };
 
 exports.webpImages = webpImages;
@@ -110,8 +111,8 @@ exports.clean = clean;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series(html));
-  gulp.watch("source/js/*.js", gulp.series(copy));
+  gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("source/js/*.js", gulp.series("copy"));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
@@ -127,9 +128,10 @@ const html = () => {
 exports.html = html;
 
 
+
 // Build
 
-gulp.task("build", gulp.series(clean, copy, styles, sprite, html));
+gulp.task("build", gulp.series(clean, copy, styles, images, webpImages, sprite, html));
 
 
 // Gulp start
