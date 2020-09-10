@@ -13,7 +13,7 @@
   <body class="page__body">
     <div class="page__wrapper">
       <header class="page-header">
-        <nav class="main-nav main-nav--closed main-nav--nojs">
+        <nav class="main-nav main-nav--opened main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -83,9 +83,9 @@
               <legend class="form__title form__title--contact">Контактная информация:</legend>
               <div class="form__wrap form__wrap--contact">
                 <div class="form__inner form__inner--contact">
-                  <label class="form__label form__label--contact" for="phone"><span class="desktop-hidden">Контактный</span> телефон<sup>*</sup>:</label>
+                  <label class="form__label form__label--contact" for="phone"><span class="form__desktop-hidden">Контактный</span> телефон<sup>*</sup>:</label>
                   <div class="form__input-wrap-phone">
-                    <input class="form__input form__input--contact" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
+                    <input class="form__input form__input--contact" type="text" name="phone" id="phone" placeholder="Введите телефон" required>
                     <p>
                       <svg class="form__phone-icon" width="16" height="16">
                         <use xlink:href="img/sprite.svg#icon-phone"></use>
@@ -96,7 +96,7 @@
                 <div class="form__inner form__inner--contact">
                   <label class="form__label form__label--contact" for="email">Электронная почта<sup>*</sup>:</label>
                   <div class="form__input-wrap-mail">
-                  <input class="form__input form__input--contact" type="email"  id="email" name="email" placeholder="Введите e-mail" required>
+                  <input class="form__input form__input--contact" type="text"  id="email" name="email" placeholder="Введите e-mail" required>
                   <p>
                     <svg class="form__mail-icon" width="16" height="16">
                       <use xlink:href="img/sprite.svg#icon-mail"></use>
@@ -193,15 +193,15 @@
       </footer>
     </div>
     <article class="modal">
-      <div class="modal__failure">
+      <div class="modal__failure modal__close">
         <h2 class="modal__failure-title">ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
         <p class="modal__failure-description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <a class="modal__failure-close" href="#">OK</a>
+        <a class="modal__failure-btn" href="#">OK</a>
       </div>
-      <div class="modal__success">
+      <div class="modal__success modal__close">
         <h2 class="modal__success-title">Ваш отзыв отправлен!</h2>
         <p class="modal__success-description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <span>В ближайшее время мы</span> опубликуем его на сайте.</p>
-        <p class="modal__success-close">
+        <p class="modal__success-btn">
           <a href="#">Закрыть окно</a>
         </p>
       </div>

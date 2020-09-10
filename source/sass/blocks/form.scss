@@ -219,6 +219,10 @@
     font-weight: bold;
   }
 
+  &--warning {
+    border: 4px solid rgba($color: red, $alpha: 0.3);
+  }
+
   &--personal {
     flex-grow: 1;
   }
@@ -397,10 +401,6 @@ input[type="radio"] {
     color: rgba($color: $white, $alpha: 0.3);
     outline: none;
   }
-}
-
-.desktop-tel {
-  visibility: hidden;
 }
 
 @media (min-width: $tablet-width) {
@@ -827,7 +827,7 @@ input[type="radio"] {
     }
   }
 
-  .desktop-hidden {
+  .form__desktop-hidden {
     display: none;
     padding: 0;
     margin: 0;

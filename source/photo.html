@@ -12,7 +12,7 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -52,26 +52,28 @@
         </picture>
       </a>
     </header>
-    <main class="page-photo">
+    <main class="page-main">
       <div class="page-main__intro page-main__intro--photo">
-        <img class="page-main__sedona" src="img/text-sedona.svg" width="282" height="214" alt="Sedona - welcome to the gorgeous">
+        <img src="img/text-sedona.svg" width="282" height="214" alt="Sedona - welcome to the gorgeous">
       </div>
-      <div class="page-photo__main-title">
-        <h1 class="page-photo__text">Фото и видео</h1>
-        <p class="page-photo__description">Не можете решиться на путешествие из-за курса?<span> Фотографии помогут вам забыть о политике и экономике.</span></p>
+      <div class="main-title main-title--photo">
+        <h1 class="main-title__text main-title__text--photo">Фото и видео</h1>
+        <p class="main-title__description main-title__description--photo">Не можете решиться на путешествие из-за курса?<span> Фотографии помогут вам забыть о политике и экономике.</span></p>
       </div>
       <section class="photo">
         <h2 class="visually-hidden">Фото Галерея</h2>
         <div class="photo__wrapper">
           <figure class="photo__item photo__item--sunset">
-            <picture>
-              <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-sunset-desktop@1x.webp, img/photo-sunset-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.webp, img/photo-sunset-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-sunset-mobile@1x.webp, img/photo-sunset-mobile@2x.webp 2x">
-              <source media="(min-width: 1280px)" srcset="img/photo-sunset-desktop@1x.jpg, img/photo-sunset-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg, img/photo-sunset-tablet@2x.jpg 2x">
-              <img src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg" width="280" height="280" alt="sunset">
-            </picture>
+            <a href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-sunset-desktop@1x.webp, img/photo-sunset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.webp, img/photo-sunset-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-sunset-mobile@1x.webp, img/photo-sunset-mobile@2x.webp 2x">
+                <source media="(min-width: 1280px)" srcset="img/photo-sunset-desktop@1x.jpg, img/photo-sunset-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg, img/photo-sunset-tablet@2x.jpg 2x">
+                <img src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg" width="280" height="280" alt="sunset">
+              </picture>
+            </a>
             <figcaption class="photo__wrap">
               <div class="photo__info">
                 <h3 class="photo__title">неродные просторы</h3>
@@ -84,14 +86,16 @@
             </figcaption>
           </figure>
           <figure class="photo__item photo__item--cactus">
-            <picture>
-              <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-cactus-desktop@1x.webp, img/photo-cactus-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.webp, img/photo-cactus-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-cactus-mobile@1x.webp, img/photo-cactus-mobile@2x.webp 2x">
-              <source media="(min-width: 1280px)" srcset="img/photo-cactus-desktop@1x.jpg, img/photo-cactus-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg, img/photo-cactus-tablet@2x.jpg 2x">
-              <img src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg" width="280" height="280" alt="cactus">
-            </picture>
+            <a href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-cactus-desktop@1x.webp, img/photo-cactus-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.webp, img/photo-cactus-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-cactus-mobile@1x.webp, img/photo-cactus-mobile@2x.webp 2x">
+                <source media="(min-width: 1280px)" srcset="img/photo-cactus-desktop@1x.jpg, img/photo-cactus-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg, img/photo-cactus-tablet@2x.jpg 2x">
+                <img src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg" width="280" height="280" alt="cactus">
+              </picture>
+            </a>
             <figcaption class="photo__wrap">
               <div class="photo__info">
                 <h3 class="photo__title">Местная растительность</h3>
@@ -105,14 +109,16 @@
             </figcaption>
           </figure>
           <figure class="photo__item photo__item--roads">
-            <picture>
-              <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-roads-desktop@1x.webp, img/photo-roads-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp, img/photo-roads-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp, img/photo-roads-mobile@2x.webp 2x">
-              <source media="(min-width: 1280px)" srcset="img/photo-roads-desktop@1x.jpg, img/photo-roads-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg, img/photo-roads-tablet@2x.jpg 2x">
-              <img src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg" width="280" height="280" alt="roads">
-            </picture>
+            <a href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-roads-desktop@1x.webp, img/photo-roads-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp, img/photo-roads-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp, img/photo-roads-mobile@2x.webp 2x">
+                <source media="(min-width: 1280px)" srcset="img/photo-roads-desktop@1x.jpg, img/photo-roads-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg, img/photo-roads-tablet@2x.jpg 2x">
+                <img src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg" width="280" height="280" alt="roads">
+              </picture>
+            </a>
             <figcaption class="photo__wrap">
               <div class="photo__info">
                 <h3 class="photo__title">Дорога на север</h3>
@@ -126,14 +132,16 @@
             </figcaption>
           </figure>
           <figure class="photo__item photo__item--bridge">
-            <picture>
-              <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-bridge-desktop@1x.webp, img/photo-bridge-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp, img/photo-bridge-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp, img/photo-bridge-mobile@2x.webp 2x">
-              <source media="(min-width: 1280px)" srcset="img/photo-bridge-desktop@1x.jpg, img/photo-bridge-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg, img/photo-bridge-tablet@2x.jpg 2x">
-              <img src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg" width="280" height="280" alt="bridges">
-            </picture>
+            <a href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-bridge-desktop@1x.webp, img/photo-bridge-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp, img/photo-bridge-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp, img/photo-bridge-mobile@2x.webp 2x">
+                <source media="(min-width: 1280px)" srcset="img/photo-bridge-desktop@1x.jpg, img/photo-bridge-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg, img/photo-bridge-tablet@2x.jpg 2x">
+                <img src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg" width="280" height="280" alt="bridges">
+              </picture>
+            </a>
             <figcaption class="photo__wrap">
               <div class="photo__info">
                 <h3 class="photo__title">Мост дьявола</h3>
