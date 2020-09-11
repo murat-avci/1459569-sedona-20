@@ -7,6 +7,19 @@
     width: auto;
   }
 
+  .advantages__image {
+    background-image: url("../img/main-city-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 260px;
+    background-color: $concrete;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-city-mobile@2x.jpg");
+    }
+  }
+
   .advantages__wrapper {
     position: relative;
     margin: 0;
@@ -54,6 +67,16 @@
       border-bottom: none;
       min-width: 320px;
       height: auto;
+    }
+
+    &--bridge {
+      .advantages__image {
+        background-image: url("../img/main-bridge-mobile@1x.jpg");
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/main-bridge-mobile@2x.jpg");
+        }
+      }
     }
 
     &--area {
@@ -143,6 +166,7 @@
     width: 100%;
     height: auto;
     margin: 0;
+    padding: 0;
     object-fit: cover;
   }
 
@@ -191,6 +215,14 @@
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 2;
+        background-image: url("../img/main-bridge-tablet@1x.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/main-bridge-tablet@2x.jpg");
+        }
       }
     }
   }
@@ -242,12 +274,19 @@
   .advantages__image {
     grid-column-start: 2;
     grid-column-end: 4;
+    background-image: url("../img/main-city-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: $concrete;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-city-tablet@2x.jpg");
+    }
   }
 
   .advantages__responsive {
-    display: block;
     width: 100%;
-    height: 100%;
   }
 
   .advantages__real-city {
@@ -352,15 +391,33 @@
           padding-left: 2px;
         }
       }
+
+      .advantages__image {
+        background-image: url("../img/main-bridge-desktop@1x.jpg");
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/main-bridge-desktop@2x.jpg");
+        }
+      }
     }
   }
 
+  .advantages__image {
+    background-image: url("../img/main-city-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-city-desktop@2x.jpg");
+    }
+  }
+
+  /*
   .advantages__responsive {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 256px;
+    object-fit: cover;
   }
-
+*/
   .advantages__properties {
     .advantages__item {
       .advantages__title {

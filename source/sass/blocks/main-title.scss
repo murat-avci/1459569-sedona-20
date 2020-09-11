@@ -63,12 +63,8 @@
 
 @media (min-width: $tablet-width) {
   .main-title {
-    margin: 26px auto 40px auto;
+    margin: 32px 141px 43px 138px;
     padding: 0;
-
-    &--index {
-      margin: 32px 85px 39px 85px;
-    }
 
     &--form {
       margin: 62px 165px 68px 159px;
@@ -97,9 +93,10 @@
   }
 
   .main-title__description {
+    font-size: 14px;
+    line-height: 24px;
+
     &--photo {
-      font-size: 14px;
-      line-height: 24px;
       width: 100%;
       margin: 0;
       padding: 0;
