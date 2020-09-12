@@ -16,7 +16,7 @@
     text-align: center;
     width: auto;
     padding: 0 12.5px 0 12.5px;
-    margin: 32px 9px 31px 12px;
+    margin: 32px 9px 17px 12px;
   }
 }
 
@@ -126,7 +126,11 @@
   .main-title__text {
     font-size: 21px;
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 33px;
+
+    &--photo {
+      font-size: 30px;
+    }
 
     &--form {
       font-size: 30px;
@@ -141,6 +145,7 @@
 
     &--photo {
       margin-top: 8px;
+      margin-left: 0;
     }
   }
 }
