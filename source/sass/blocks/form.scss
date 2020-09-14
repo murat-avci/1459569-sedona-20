@@ -2,11 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "PTSans", "Tahoma", sans-serif;
   margin: 0;
   padding: 0;
 }
 
+.form__wrap {
+  font-family: inherit;
+}
+
 .form__item {
+  font-family: inherit;
   line-height: 26px;
   border: none;
   border-bottom: 1px solid $mercury;
@@ -48,15 +54,16 @@
 }
 
 .form__title {
+  font-family: inherit;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 
   &--attraction {
-    margin: 36px calc((105 / 320) * 100%) auto;
-    margin-bottom: 36px;
-    display: block;
+    margin: 36px auto;
 
     & span {
       white-space: nowrap;
@@ -73,6 +80,7 @@
 }
 
 .form__inner {
+  font-family: inherit;
   padding: 0;
 
   &--contact:not(:last-child) {
@@ -95,6 +103,7 @@
   position: relative;
   cursor: pointer;
   display: block;
+  font-family: inherit;
   font-size: 14px;
   line-height: 26px;
   font-weight: normal;
@@ -135,6 +144,7 @@
       border: 5px solid $concrete;
     }
 
+    &:focus,
     &:hover {
       &::before {
         background-color: $mercury;
@@ -143,7 +153,7 @@
     }
 
     &:active {
-      &::before, {
+      &::before {
         background-color: $gray4;
         border-color: $gray4;
       }
@@ -181,6 +191,7 @@
       border-radius: 5px;
     }
 
+    &:focus,
     &:hover {
       &::before {
         background-color: $mercury;
@@ -207,6 +218,9 @@
 }
 
 .form__input {
+  font-family: "PTSans", "Tahoma", sans-serif;
+  line-height: 26px;
+  font-weight: bold;
   padding: 5px 0 0 18px;
   height: 58px;
   border: 4px solid $concrete;
@@ -214,13 +228,8 @@
 
   &::placeholder {
     color: $black;
-    font-size: 16px;
-    line-height: 26px;
-    font-weight: bold;
-  }
-
-  &--warning {
-    border: 4px solid rgba($color: red, $alpha: 0.3);
+    font-size: 18px;
+    font-family: inherit;
   }
 
   &--personal {
@@ -229,16 +238,11 @@
 
   &--contact {
     padding: 6px 18px 0 18px;
-    height: 58px;
     width: 100%;
   }
 
   &--personal[name="middle-name"] {
     margin-left: 3px;
-
-    &::placeholder {
-      letter-spacing: -0.4px;
-    }
   }
 
   &--personal,
@@ -250,13 +254,13 @@
     }
 
     &:focus {
-      outline-color: transparent;
-    }
-
-    &:active {
       background-color: $white;
       border: 4px solid $mercury;
       outline: none;
+      padding-left: 18px;
+    }
+
+    &:active {
       padding-left: 18px;
     }
   }
@@ -278,6 +282,7 @@
 
 .form__input-wrap-phone {
   position: relative;
+  font-family: inherit;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -305,6 +310,7 @@
 
 .form__input-wrap-mail {
   position: relative;
+  font-family: inherit;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -368,6 +374,7 @@ input[type="radio"] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: inherit;
   width: 100%;
   padding: 0 20px 0 20px;
   margin: 0;
@@ -458,13 +465,10 @@ input[type="radio"] {
     &--attraction {
       grid-column-start: 1;
       grid-column-end: 3;
-      padding: 0;
+      padding: 58px 0 79px 95px;
       margin: 0;
       border: none;
       border-top: 1px solid $gray3;
-      padding-top: 58px;
-      padding-left: 95px;
-      padding-bottom: 79px;
       margin-bottom: 0;
     }
 
@@ -530,7 +534,7 @@ input[type="radio"] {
 
     &--attraction {
       padding: 0 16.5px;
-      margin: 0;
+      margin: 0 auto;
       width: 73%;
     }
 
@@ -868,14 +872,9 @@ input[type="radio"] {
           padding-left: 20px;
         }
 
+        &:focus,
         &:active {
-          padding-left: 16px;
-        }
-
-        &::placeholder {
-          font-size: 16px;
-          line-height: 26px;
-          letter-spacing: -0.2px;
+          padding-left: 18px;
         }
       }
 
@@ -887,6 +886,7 @@ input[type="radio"] {
         padding-left: 22px;
       }
 
+      &:focus,
       &:active {
         padding-left: 18px;
       }

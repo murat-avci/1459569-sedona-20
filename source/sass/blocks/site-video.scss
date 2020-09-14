@@ -111,20 +111,6 @@
   background-color: transparent;
   padding: 0;
   margin-left: 31px;
-
-  & svg {
-    & polygon {
-      fill: $shuttlegray;
-    }
-
-    &:hover polygon {
-      fill: $mineshaft;
-    }
-
-    &:active polygon {
-      fill: rgba($color: $mineshaft, $alpha: 0.3);
-    }
-  }
 }
 
 .site-video__fullscreen-icon {
